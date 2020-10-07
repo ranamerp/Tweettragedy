@@ -1,21 +1,11 @@
-# DISCLAIMER: I have not yet been able to analyze the tweets pulled from
-# twitter, as they are in real time and in order to create a table out
-# of the tweets, I would have to stop the streaming API from pulling
-# any new tweets.
-
-# Still would like to create dataframe out of tweets and display pandas profiling
-
-# I will also research more about the mongodb database, but I think I got most of it.
-
 from __future__ import print_function
-from time import sleep
 import tweepy
 import json
 from pymongo import MongoClient
 
-# This is assuming you have mongoDB installed locally
-MONGO_HOST = 'mongodb://localhost/twitterdb'
-# and a database called twitterdb
+# Link to Simon's database in mongodb atlas
+MONGO_HOST = 'mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/twitterdb?retryWrites=true&w=majority'
+# Created a database named "twitterdb" in custer0
 
 keyword = input("Enter keyword: ")
 keywordWithPoundSign = "#" + keyword  # Included keyword with pound sign in front, same thing
@@ -33,6 +23,7 @@ class StreamListener(tweepy.StreamListener):
     def on_connect(self):
         # Called initially to connect to the Streaming API
         print("You are now connected to the streaming API.")
+        print("Storing tweets in database......")
 
     def on_error(self, status_code):
         # On error - if an error occurs, display the error / status code
@@ -50,19 +41,12 @@ class StreamListener(tweepy.StreamListener):
             # Decode the JSON from Twitter
             datajson = json.loads(data)
 
-            # grab the 'created_at' data from the Tweet to use for display
-            #created_at = datajson['created_at']
-
-            # print out a message to the screen that we have collected a tweet
-            # print("Tweet collected at " + str(created_at))
-
-            # insert the data into the mongoDB into a collection called twitter_search
+            # insert the data into the mongoDB into a collection called tweets
             # if twitter_search doesn't exist, it will be created.
-            print('User: @' + datajson['user']['screen_name'])
-            print('"' + datajson['text'] + '"')
-            print(datajson['user']['location'])
-            print('-----------------------------------------------------------')
-            db.twitter_search.insert_one(datajson)
+            # Conditional check to prevent retweets or replies to be added to the database
+            if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
+                #db.tweets.insert_one(datajson)
+                print(datajson['text'])
         except Exception as e:
             print(e)
 
@@ -73,11 +57,4 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 listener = StreamListener(api=tweepy.API(wait_on_rate_limit=True))
 streamer = tweepy.Stream(auth=auth, listener=listener)
 print("Tracking: " + str(WORDS))
-sleep(1)
-print('.')
-sleep(1)
-print('.')
-sleep(1)
-print('.')
-sleep(1)
-streamer.filter(track=WORDS)
+streamer.filter(track=WORDS, languages=["en"])
