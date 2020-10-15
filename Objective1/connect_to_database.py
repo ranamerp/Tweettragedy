@@ -51,9 +51,39 @@ class StreamListener(tweepy.StreamListener):
             print(e)
 
 
+def get_past_tweets(keyword):
+    search_words = keyword + " -filter:retweets"
+    date_since = "2020-01-01"
+
+    api=tweepy.API(wait_on_rate_limit=True)
+
+    tweets = tweepy.Cursor(api.search,
+                           q=search_words,
+                           lang="en",
+                           since=date_since).items(1000)
+
+    try:
+        client = MongoClient(MONGO_HOST)
+        db = client.twitterdb
+
+        for tweet in tweets:
+            data = {"username": tweet.user.screen_name, "tweet": tweet.text, "location": tweet.user.location}
+
+            with open('temp.txt', 'a') as f:
+                f.write(str(data))
+
+            if (data['text'].find('RT ') == -1 and data['text'][0] != '@'):
+                pass
+                # db.tweets.save(data)
+
+    except Exception as e:
+        print(e)
+
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 # Set up the listener. The 'wait_on_rate_limit=True' is needed to help with Twitter API rate limiting.
+print("Getting past tweets: " + str(WORDS))
+get_past_tweets(WORDS[0])
 listener = StreamListener(api=tweepy.API(wait_on_rate_limit=True))
 streamer = tweepy.Stream(auth=auth, listener=listener)
 print("Tracking: " + str(WORDS))
