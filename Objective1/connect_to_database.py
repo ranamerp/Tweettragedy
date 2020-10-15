@@ -1,5 +1,5 @@
 from __future__ import print_function
-import tweepy
+import tweepy as tw
 import json
 from pymongo import MongoClient
 
@@ -8,16 +8,34 @@ MONGO_HOST = 'mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/twi
 # Created a database named "twitterdb" in custer0
 
 keyword = input("Enter keyword: ")
-keywordWithPoundSign = "#" + keyword  # Included keyword with pound sign in front, same thing
-
-WORDS = [keyword, keywordWithPoundSign]
 
 CONSUMER_KEY = "Duko8zJpuAMqAqOCGn3gLCdU7"
 CONSUMER_SECRET = "K116dYN4lj0Ol4DGUsiCMAH8Vhz5tL02k3OPERWifGmwDLJ2rm"
 ACCESS_TOKEN = "603210098-mkYuAJoQ5SptpC7laiENIFeyquRwCqPfA2XRTgt0"
 ACCESS_TOKEN_SECRET = "vMeTce7nJffxEFDOGyNHrCHYIYIARP0IVywjaHPhg6oN8"
 
-class StreamListener(tweepy.StreamListener):
+auth = tw.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+
+def get_past_tweets(keyword):
+    search_words = keyword + " -filter:retweets" + " -filter:replies"
+    date_since = "2019-01-01"
+
+    api = tw.API(auth, wait_on_rate_limit=True)
+
+    tweets = tw.Cursor(api.search,
+                           q=search_words,
+                           lang="en",
+                           since=date_since).items(5)
+
+    client = MongoClient(MONGO_HOST)
+    db = client.twitterdb
+
+    for tweet in tweets:
+        pass
+        #db.tweets.insert_one(tweet._json)
+
+class StreamListener(tw.StreamListener):
     # This is a class provided by tweepy to access the Twitter Streaming API.
 
     def on_connect(self):
@@ -32,29 +50,27 @@ class StreamListener(tweepy.StreamListener):
 
     def on_data(self, data):
         # This is the meat of the script...it connects to your mongoDB and stores the tweet
-        try:
-            client = MongoClient(MONGO_HOST)
 
-            # Use twitterdb database. If it doesn't exist, it will be created.
-            db = client.twitterdb
+        client = MongoClient(MONGO_HOST)
 
-            # Decode the JSON from Twitter
-            datajson = json.loads(data)
+        # Use twitterdb database. If it doesn't exist, it will be created.
+        db = client.twitterdb
 
-            # insert the data into the mongoDB into a collection called tweets
-            # if twitter_search doesn't exist, it will be created.
-            # Conditional check to prevent retweets or replies to be added to the database
-            if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
-                #db.tweets.insert_one(datajson)
-                print(datajson['text'])
-        except Exception as e:
-            print(e)
+        # Decode the JSON from Twitter
+        datajson = json.loads(data)
+
+        # insert the data into the mongoDB into a collection called tweets
+        # if twitter_search doesn't exist, it will be created.
+        # Conditional check to prevent retweets or replies to be added to the database
+        if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
+            pass
+            #db.tweets.insert_one(datajson)
 
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 # Set up the listener. The 'wait_on_rate_limit=True' is needed to help with Twitter API rate limiting.
-listener = StreamListener(api=tweepy.API(wait_on_rate_limit=True))
-streamer = tweepy.Stream(auth=auth, listener=listener)
-print("Tracking: " + str(WORDS))
-streamer.filter(track=WORDS, languages=["en"])
+print("Collecting past tweets: " + str(keyword))
+get_past_tweets(keyword)
+listener = StreamListener(api=tw.API(wait_on_rate_limit=True))
+streamer = tw.Stream(auth=auth, listener=listener)
+print("Tracking: " + str(keyword))
+streamer.filter(track=keyword, languages=["en"])
