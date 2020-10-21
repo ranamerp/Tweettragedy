@@ -1,3 +1,4 @@
+# Libraries
 import tweepy as tw
 import json
 from pymongo import MongoClient
@@ -29,12 +30,10 @@ tweet_train, tweet_test, spam_nospam_train, spam_nospam_test = train_test_split(
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-
 Spam_model = LogisticRegression(solver='liblinear', penalty='l1')
 Spam_model.fit(tweet_train, spam_nospam_train)
 pred = Spam_model.predict(tweet_test)
 print('Accuracy of machine learning model: ' + str(accuracy_score(spam_nospam_test, pred)))
-#print(Spam_model.predict(tweet_test))
 
 # Link to Simon's database in mongodb atlas
 MONGO_HOST = 'mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/twitterdb?retryWrites=true&w=majority'
@@ -66,8 +65,8 @@ def get_past_tweets(keyword):
 
     for tweet in tweets:
         pass
-        print(str(tweet._json['text']) + ' ' + Spam_model.predict(vectorizer.transform([tweet._json['text']]))[0])
-        #db.tweets.insert_one(tweet._json)
+        tweet._json['relevance'] = Spam_model.predict(vectorizer.transform([tweet._json['text']]))[0]
+        db.tweets.insert_one(tweet._json)
 
 class StreamListener(tw.StreamListener):
     # This is a class provided by tweepy to access the Twitter Streaming API.
@@ -98,6 +97,7 @@ class StreamListener(tw.StreamListener):
         # Conditional check to prevent retweets or replies to be added to the database
         if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
             pass
+            datajson['relevance'] = Spam_model.predict(vectorizer.transform([datajson['text']]))[0]
             #db.tweets.insert_one(datajson)
 
 
