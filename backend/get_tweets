@@ -8,6 +8,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import nltk
 from nltk.corpus import stopwords
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
 nltk.download('stopwords')
 
 def text_preprocess(text):
@@ -15,25 +17,34 @@ def text_preprocess(text):
     text = [word for word in text.split() if word.lower() not in stopwords.words('english')]
     return " ".join(text)
 
+# Importing training dataset
 tweet_data = pd.read_csv("training.csv", encoding="latin")
+# Dropping index column
 tweet_data = tweet_data.drop(['Unnamed: 0'], axis=1)
+# Dropping all empty columns that I may have left blank on accident
 tweet_data.dropna(axis=0, inplace=True)
 
+# Copies tweet column from dataset
 tweet_data_copy = tweet_data['tweet'].copy()
+# Removes punctuation and stopwords. Only keeps keywords of all tweets.
 tweet_data_copy = tweet_data_copy.apply(text_preprocess)
 
+# Collecting each word and its frequency in each email
 vectorizer = TfidfVectorizer("english")
 tweet_mat = vectorizer.fit_transform(tweet_data_copy)
 
-tweet_train, tweet_test, spam_nospam_train, spam_nospam_test = train_test_split(tweet_mat,
-                                                        tweet_data['relevance'], test_size=0.3, random_state=20)
+# Splitting training model
+tweet_train, tweet_test, relevant_norelevant_train, relevant_norelevant_test = \
+    train_test_split(tweet_mat, tweet_data['relevance'], test_size=0.3, random_state=100)
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+# Making machine learning function
 Spam_model = LogisticRegression(solver='liblinear', penalty='l1')
-Spam_model.fit(tweet_train, spam_nospam_train)
-pred = Spam_model.predict(tweet_test)
-print('Accuracy of machine learning model: ' + str(accuracy_score(spam_nospam_test, pred)))
+Spam_model.fit(tweet_train, relevant_norelevant_train)
+# Accuracy of testing model and training model
+# Accuracy of testing model here matters because the higher its accuracy,
+# the better we can predict if a given tweet is relevant
+print('Accuracy of testing model: ' + str(accuracy_score(relevant_norelevant_test, Spam_model.predict(tweet_test))))
+print('Accuracy of training model: ' + str(accuracy_score(relevant_norelevant_train, Spam_model.predict(tweet_train))))
 
 # Link to Simon's database in mongodb atlas
 MONGO_HOST = 'mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/twitterdb?retryWrites=true&w=majority'
@@ -58,7 +69,7 @@ def get_past_tweets(keyword):
     tweets = tw.Cursor(api.search,
                            q=search_words,
                            lang="en",
-                           since=date_since).items(100)
+                           since=date_since).items(10000)
 
     client = MongoClient(MONGO_HOST)
     db = client.twitterdb
@@ -66,7 +77,7 @@ def get_past_tweets(keyword):
     for tweet in tweets:
         pass
         tweet._json['relevance'] = Spam_model.predict(vectorizer.transform([tweet._json['text']]))[0]
-        db.tweets.insert_one(tweet._json)
+        #db.tweets.insert_one(tweet._json)
 
 class StreamListener(tw.StreamListener):
     # This is a class provided by tweepy to access the Twitter Streaming API.
