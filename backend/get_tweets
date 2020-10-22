@@ -23,6 +23,8 @@ tweet_data = pd.read_csv("training.csv", encoding="latin")
 tweet_data = tweet_data.drop(['Unnamed: 0'], axis=1)
 # Dropping all empty columns that I may have left blank on accident
 tweet_data.dropna(axis=0, inplace=True)
+# Shuffling rows
+tweet_data = tweet_data.sample(frac=1)
 
 # Copies tweet column from dataset
 tweet_data_copy = tweet_data['tweet'].copy()
@@ -38,13 +40,13 @@ tweet_train, tweet_test, relevant_norelevant_train, relevant_norelevant_test = \
     train_test_split(tweet_mat, tweet_data['relevance'], test_size=0.3, random_state=100)
 
 # Making machine learning function
-Spam_model = LogisticRegression(solver='liblinear', penalty='l1')
-Spam_model.fit(tweet_train, relevant_norelevant_train)
+Relevance_model = LogisticRegression(solver='liblinear', penalty='l1')
+Relevance_model.fit(tweet_train, relevant_norelevant_train)
 # Accuracy of testing model and training model
 # Accuracy of testing model here matters because the higher its accuracy,
 # the better we can predict if a given tweet is relevant
-print('Accuracy of testing model: ' + str(accuracy_score(relevant_norelevant_test, Spam_model.predict(tweet_test))))
-print('Accuracy of training model: ' + str(accuracy_score(relevant_norelevant_train, Spam_model.predict(tweet_train))))
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, Relevance_model.predict(tweet_test))))
+print('Accuracy training: ' + str(accuracy_score(relevant_norelevant_train, Relevance_model.predict(tweet_train))))
 
 # Link to Simon's database in mongodb atlas
 MONGO_HOST = 'mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/twitterdb?retryWrites=true&w=majority'
@@ -76,7 +78,7 @@ def get_past_tweets(keyword):
 
     for tweet in tweets:
         pass
-        tweet._json['relevance'] = Spam_model.predict(vectorizer.transform([tweet._json['text']]))[0]
+        tweet._json['relevance'] = Relevance_model.predict(vectorizer.transform([tweet._json['text']]))[0]
         #db.tweets.insert_one(tweet._json)
 
 class StreamListener(tw.StreamListener):
@@ -108,7 +110,7 @@ class StreamListener(tw.StreamListener):
         # Conditional check to prevent retweets or replies to be added to the database
         if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
             pass
-            datajson['relevance'] = Spam_model.predict(vectorizer.transform([datajson['text']]))[0]
+            datajson['relevance'] = Relevance_model.predict(vectorizer.transform([datajson['text']]))[0]
             #db.tweets.insert_one(datajson)
 
 
