@@ -14,46 +14,21 @@ from sklearn.metrics import accuracy_score
 nltk.download('stopwords')
 
 # Use this line of code to load back the model
-from joblib import dump, load
+from joblib import load
 # Model has a 95% percent accuracy
 Relevance_model = load('filename.joblib')
-
-# Model is not being trained again here, this is just importing the dataset and vectorization
-#################################################################################################
-def text_preprocess(text):
-    text = text.translate(str.maketrans('', '', string.punctuation))
-    text = [word for word in text.split() if word.lower() not in stopwords.words('english')]
-    return " ".join(text)
-
-# Importing training dataset
-tweet_data = pd.read_csv("training.csv", encoding="latin")
-# Dropping index column
-tweet_data = tweet_data.drop(['Unnamed: 0'], axis=1)
-# Dropping all empty columns that I may have left blank on accident
-tweet_data.dropna(axis=0, inplace=True)
-# Shuffling rows
-tweet_data = tweet_data.sample(frac=1)
-
-# Copies tweet column from dataset
-tweet_data_copy = tweet_data['tweet'].copy()
-# Removes punctuation and stopwords. Only keeps keywords of all tweets.
-tweet_data_copy = tweet_data_copy.apply(text_preprocess)
-
-# Collecting each word and its frequency in each email
-vectorizer = TfidfVectorizer("english")
-tweet_mat = vectorizer.fit_transform(tweet_data_copy)
-###############################################################################
+# Parser. This is also a pickle object
+parser = load('filename2.joblib')
 
 # Link to Simon's database in mongodb atlas
-MONGO_HOST = 'mongodb+srv://markusovich:Alexmom99@cluster0.enna3.mongodb.net/twitterdb?retryWrites=true&w=majority'
-# Created a database named "twitterdb" in custer0
+MONGO_HOST = 'mongodb+srv://SimonMarkus:#TheTwitterHackers@cluster0.enna3.mongodb.net/tweetDB?retryWrites=true&w=majority'
 
 keyword = input("Enter keyword: ")
 
-CONSUMER_KEY = "Duko8zJpuAMqAqOCGn3gLCdU7"
-CONSUMER_SECRET = "K116dYN4lj0Ol4DGUsiCMAH8Vhz5tL02k3OPERWifGmwDLJ2rm"
-ACCESS_TOKEN = "603210098-mkYuAJoQ5SptpC7laiENIFeyquRwCqPfA2XRTgt0"
-ACCESS_TOKEN_SECRET = "vMeTce7nJffxEFDOGyNHrCHYIYIARP0IVywjaHPhg6oN8"
+CONSUMER_KEY = "RUwp5Jv7MLdw5GoorbhKRuBlI"
+CONSUMER_SECRET = "fsyrhyubNZfXhczDciIk048fncmA7rcHD7phP4dPrwXfWWlcI0"
+ACCESS_TOKEN = "1283827551283093504-q7KZDnxPHV3kmk1UJgSINsncIx05Qf"
+ACCESS_TOKEN_SECRET = "34vLn1Ivv3qYUACnPY15sOgUmoCvtPKcjs8EFAxYoSgED"
 
 auth = tw.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
@@ -64,56 +39,16 @@ def get_past_tweets(keyword):
 
     api = tw.API(auth, wait_on_rate_limit=True)
 
-    tweets = tw.Cursor(api.search,
-                           q=search_words,
-                           lang="en",
-                           since=date_since).items(100)
+    tweets = tw.Cursor(api.search, q=search_words, lang="en", since=date_since).items(10)
 
     client = MongoClient(MONGO_HOST)
     db = client.twitterdb
 
     for tweet in tweets:
         pass
-        tweet._json['relevance'] = Relevance_model.predict(TfidfVectorizer("english").transform([tweet._json['text']]))[0]
-        #db.tweets.insert_one(tweet._json)
-
-class StreamListener(tw.StreamListener):
-    # This is a class provided by tweepy to access the Twitter Streaming API.
-
-    def on_connect(self):
-        # Called initially to connect to the Streaming API
-        print("You are now connected to the streaming API.")
-        print("Storing tweets in database......")
-
-    def on_error(self, status_code):
-        # On error - if an error occurs, display the error / status code
-        print('An Error has occured: ' + repr(status_code))
-        return False
-
-    def on_data(self, data):
-        # This is the meat of the script...it connects to your mongoDB and stores the tweet
-
-        client = MongoClient(MONGO_HOST)
-
-        # Use twitterdb database. If it doesn't exist, it will be created.
-        db = client.twitterdb
-
-        # Decode the JSON from Twitter
-        datajson = json.loads(data)
-
-        # insert the data into the mongoDB into a collection called tweets
-        # if twitter_search doesn't exist, it will be created.
-        # Conditional check to prevent retweets or replies to be added to the database
-        if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
-            pass
-            datajson['relevance'] = Relevance_model.predict(vectorizer.transform([datajson['text']]))[0]
-            #db.tweets.insert_one(datajson)
-
+        tweet._json['relevance'] = Relevance_model.predict(parser.transform([tweet._json['text']]))[0]
+        #db.tweetDB.insert_one(tweet._json)
 
 # Set up the listener. The 'wait_on_rate_limit=True' is needed to help with Twitter API rate limiting.
-print("Collecting past tweets: " + str(keyword))
+print("Collecting past tweets...")
 get_past_tweets(keyword)
-listener = StreamListener(api=tw.API(wait_on_rate_limit=True))
-streamer = tw.Stream(auth=auth, listener=listener)
-#print("Tracking: " + str(keyword))
-#streamer.filter(track=keyword, languages=["en"])
