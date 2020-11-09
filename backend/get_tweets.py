@@ -1,12 +1,12 @@
 # Libraries
+import multiprocessing
+from datetime import time
+
 import tweepy as tw
 import json
 from pymongo import MongoClient
 import pandas as pd
 import string
-import time
-import multiprocessing
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import nltk
@@ -17,39 +17,11 @@ from sklearn.metrics import accuracy_score
 nltk.download('stopwords')
 
 # Use this line of code to load back the model
-from joblib import dump, load
+from joblib import load
 # Model has a 95% percent accuracy
 Relevance_model = load('filename.joblib')
-
-# Model is not being trained again here, this is just importing the dataset and vectorization
-#################################################################################################
-def text_preprocess(text):
-    text = text.translate(str.maketrans('', '', string.punctuation))
-    text = [word for word in text.split() if word.lower() not in stopwords.words('english')]
-    return " ".join(text)
-
-# Importing training dataset
-tweet_data = pd.read_csv("training.csv", encoding="latin")
-# Dropping index column
-tweet_data = tweet_data.drop(['Unnamed: 0'], axis=1)
-# Dropping all empty columns that I may have left blank on accident
-tweet_data.dropna(axis=0, inplace=True)
-# Shuffling rows
-tweet_data = tweet_data.sample(frac=1)
-
-# Copies tweet column from dataset
-tweet_data_copy = tweet_data['tweet'].copy()
-# Removes punctuation and stopwords. Only keeps keywords of all tweets.
-tweet_data_copy = tweet_data_copy.apply(text_preprocess)
-
-# Collecting each word and its frequency in each email
-vectorizer = TfidfVectorizer("english")
-tweet_mat = vectorizer.fit_transform(tweet_data_copy)
-###############################################################################
-
-# Link to Simon's database in mongodb atlas
-MONGO_HOST = 'mongodb+srv://Application:Hacker@cluster0.qpng4.mongodb.net/tweetsDB?retryWrites=true&w=majority'
-# Created a database named "twitterdb" in custer0
+# Parser. This is also a pickle object
+parser = load('filename2.joblib')
 
 CONSUMER_KEY = "RUwp5Jv7MLdw5GoorbhKRuBlI"
 CONSUMER_SECRET = "fsyrhyubNZfXhczDciIk048fncmA7rcHD7phP4dPrwXfWWlcI0"
@@ -62,23 +34,24 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 auth2 = tw.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth2.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
+# Link to Simon's database in mongodb atlas
+MONGO_HOST = 'mongodb+srv://SimonMarkus:#TheTwitterHackers@cluster0.enna3.mongodb.net/tweetDB?retryWrites=true&w=majority'
+
 def get_past_tweets(keyword):
     search_words = keyword + " -filter:retweets" + " -filter:replies"
     date_since = "2019-01-01"
 
     api = tw.API(auth, wait_on_rate_limit=True)
-    tweets = tw.Cursor(api.search,
-                           q=search_words,
-                           lang="en",
-                           since=date_since).items(1000)
+
+    tweets = tw.Cursor(api.search, q=search_words, lang="en", since=date_since).items(10)
 
     client = MongoClient(MONGO_HOST)
     db = client.twitterdb
 
     for tweet in tweets:
-      print("Past Tweet")
-      tweet._json['relevance'] = Relevance_model.predict(vectorizer.transform([tweet._json['text']]))[0]
-      db.tweets.insert_one(tweet._json)
+        pass
+        tweet._json['relevance'] = Relevance_model.predict(parser.transform([tweet._json['text']]))[0]
+        #db.tweetDB.insert_one(tweet._json)
 
 class StreamListener(tw.StreamListener):
     # This is a class provided by tweepy to access the Twitter Streaming API.
@@ -109,7 +82,7 @@ class StreamListener(tw.StreamListener):
         # Conditional check to prevent retweets or replies to be added to the database
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
-              datajson['relevance'] = Relevance_model.predict(vectorizer.transform([datajson['text']]))[0]
+              datajson['relevance'] = Relevance_model.predict(parser.transform([datajson['text']]))[0]
               print("Streamed Tweet")
               db.tweets.insert_one(datajson)
         except KeyError:
@@ -121,14 +94,14 @@ start_time = time.time()
 listener = StreamListener(api=tw.API(wait_on_rate_limit=True, wait_on_rate_limit_notify=True))
 streamer = tw.Stream(auth=auth2, listener=listener)
 
-t1 = multiprocessing.Process(target=get_past_tweets, args=[keyword]) 
+t1 = multiprocessing.Process(target=get_past_tweets, args=[keyword])
 t2 = multiprocessing.Process(target=streamer.filter(track=keyword, languages=['en'], async=True))
-t1.start() 
+t1.start()
 t2.start()
 
 t1.join()
 t2.join()
 
 streamer.disconnect()
-print("Done!") 
+print("Done!")
 print("--- This took %s seconds ---" % (time.time() - start_time))
