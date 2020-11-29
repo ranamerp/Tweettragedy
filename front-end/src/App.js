@@ -1,9 +1,11 @@
 import React from 'react';
-import Main from './components/Main'
+import NavSearchBar from './components/NavSearchBar'
+
 
 function App() {
+
   return (
-    <Main/>
+    <NavSearchBar/>
   );
 }
 

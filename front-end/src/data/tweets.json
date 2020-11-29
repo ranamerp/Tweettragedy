@@ -1,0 +1,3209 @@
+[{
+  "_id": {
+    "$oid": "5f95fee271c28baf81ac894e"
+  },
+  "created_at": "Sun Oct 25 22:40:31 +0000 2020",
+  "user": {
+    "location": "honeymoon ave"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69edb"
+  },
+  "created_at": "Sun Oct 25 22:42:03 +0000 2020",
+  "user": {
+    "location": "jennie mi polola"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69edc"
+  },
+  "created_at": "Sun Oct 25 22:42:02 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69edd"
+  },
+  "created_at": "Sun Oct 25 22:42:01 +0000 2020",
+  "user": {
+    "location": "United Kingdom"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69ede"
+  },
+  "created_at": "Sun Oct 25 22:41:59 +0000 2020",
+  "user": {
+    "location": "untiterd startes"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69edf"
+  },
+  "created_at": "Sun Oct 25 22:41:58 +0000 2020",
+  "user": {
+    "location": "she/her •🌱 LG(B)TQ & aspec 📚"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69ee0"
+  },
+  "created_at": "Sun Oct 25 22:41:57 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69ee1"
+  },
+  "created_at": "Sun Oct 25 22:41:53 +0000 2020",
+  "user": {
+    "location": "they/them 18"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69ee2"
+  },
+  "created_at": "Sun Oct 25 22:41:53 +0000 2020",
+  "user": {
+    "location": "she/her ✜"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3d3abbe0f15ec69ee3"
+  },
+  "created_at": "Sun Oct 25 22:41:49 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69ee4"
+  },
+  "created_at": "Sun Oct 25 22:41:41 +0000 2020",
+  "user": {
+    "location": "Norwood, MA"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69ee5"
+  },
+  "created_at": "Sun Oct 25 22:41:39 +0000 2020",
+  "user": {
+    "location": "she/they • paganini"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69ee6"
+  },
+  "created_at": "Sun Oct 25 22:41:39 +0000 2020",
+  "user": {
+    "location": "Ottawa, Ontario"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69ee7"
+  },
+  "created_at": "Sun Oct 25 22:41:36 +0000 2020",
+  "user": {
+    "location": "she/her ★ 怖くないわけないさ 平気なわけないさ every time, i know 必死に i flow あの真っ黒い風とfly now"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69ee8"
+  },
+  "created_at": "Sun Oct 25 22:41:36 +0000 2020",
+  "user": {
+    "location": "rei ✮ neuroatypical"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69ee9"
+  },
+  "created_at": "Sun Oct 25 22:41:34 +0000 2020",
+  "user": {
+    "location": "blm"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69eea"
+  },
+  "created_at": "Sun Oct 25 22:41:31 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69eeb"
+  },
+  "created_at": "Sun Oct 25 22:41:30 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69eec"
+  },
+  "created_at": "Sun Oct 25 22:41:29 +0000 2020",
+  "user": {
+    "location": "Littlespace, Iceland & NY"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69eed"
+  },
+  "created_at": "Sun Oct 25 22:41:26 +0000 2020",
+  "user": {
+    "location": "they/them"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69eee"
+  },
+  "created_at": "Sun Oct 25 22:41:22 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3e3abbe0f15ec69eef"
+  },
+  "created_at": "Sun Oct 25 22:41:22 +0000 2020",
+  "user": {
+    "location": "Philippines"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef0"
+  },
+  "created_at": "Sun Oct 25 22:41:21 +0000 2020",
+  "user": {
+    "location": "VMIN ꩜ 아파도 돼 날 묶어줘 내가 도망칠 수 없게 (쉿) 꽉 쥐고 날 흔들어줘 내가 정신 못 차리게 ☆★ carrd byf"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef1"
+  },
+  "created_at": "Sun Oct 25 22:41:20 +0000 2020",
+  "user": {
+    "location": "Global"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef2"
+  },
+  "created_at": "Sun Oct 25 22:41:19 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef3"
+  },
+  "created_at": "Sun Oct 25 22:41:17 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef4"
+  },
+  "created_at": "Sun Oct 25 22:41:15 +0000 2020",
+  "user": {
+    "location": "15 |Queer🏳️‍🌈 | 🇨🇦| INFP-T"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef5"
+  },
+  "created_at": "Sun Oct 25 22:41:15 +0000 2020",
+  "user": {
+    "location": "she/her ❁ 26"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef6"
+  },
+  "created_at": "Sun Oct 25 22:41:14 +0000 2020",
+  "user": {
+    "location": "Minneapolis, MN"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef7"
+  },
+  "created_at": "Sun Oct 25 22:41:13 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff3f3abbe0f15ec69ef8"
+  },
+  "created_at": "Sun Oct 25 22:41:13 +0000 2020",
+  "user": {
+    "location": "Louisiana"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69ef9"
+  },
+  "created_at": "Sun Oct 25 22:41:13 +0000 2020",
+  "user": {
+    "location": "California, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69efa"
+  },
+  "created_at": "Sun Oct 25 22:41:12 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69efb"
+  },
+  "created_at": "Sun Oct 25 22:41:11 +0000 2020",
+  "user": {
+    "location": "she/her 18"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69efc"
+  },
+  "created_at": "Sun Oct 25 22:41:11 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69efd"
+  },
+  "created_at": "Sun Oct 25 22:41:09 +0000 2020",
+  "user": {
+    "location": "🌑 w/ 종현 🖤 |28|blm"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69efe"
+  },
+  "created_at": "Sun Oct 25 22:41:08 +0000 2020",
+  "user": {
+    "location": "في مكان ما على طول الطريق"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69eff"
+  },
+  "created_at": "Sun Oct 25 22:41:07 +0000 2020",
+  "user": {
+    "location": "Local Baseball Field "
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69f00"
+  },
+  "created_at": "Sun Oct 25 22:41:07 +0000 2020",
+  "user": {
+    "location": "United States"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69f01"
+  },
+  "created_at": "Sun Oct 25 22:41:06 +0000 2020",
+  "user": {
+    "location": "san’s heart    ➳ it"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69f02"
+  },
+  "created_at": "Sun Oct 25 22:41:04 +0000 2020",
+  "user": {
+    "location": " ୨⠀10 : 05 ·"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69f03"
+  },
+  "created_at": "Sun Oct 25 22:41:02 +0000 2020",
+  "user": {
+    "location": "16 ; pan ; filipino"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69f04"
+  },
+  "created_at": "Sun Oct 25 22:41:01 +0000 2020",
+  "user": {
+    "location": "Lincoln, UK"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff403abbe0f15ec69f05"
+  },
+  "created_at": "Sun Oct 25 22:40:57 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f06"
+  },
+  "created_at": "Sun Oct 25 22:40:56 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f07"
+  },
+  "created_at": "Sun Oct 25 22:40:55 +0000 2020",
+  "user": {
+    "location": "erika , 24 , 🇵🇭 , she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f08"
+  },
+  "created_at": "Sun Oct 25 22:40:49 +0000 2020",
+  "user": {
+    "location": "🇸🇰 | 17"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f09"
+  },
+  "created_at": "Sun Oct 25 22:40:46 +0000 2020",
+  "user": {
+    "location": "West New York, NJ"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f0a"
+  },
+  "created_at": "Sun Oct 25 22:40:45 +0000 2020",
+  "user": {
+    "location": "平成"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f0b"
+  },
+  "created_at": "Sun Oct 25 22:40:44 +0000 2020",
+  "user": {
+    "location": "Ky"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f0c"
+  },
+  "created_at": "Sun Oct 25 22:40:43 +0000 2020",
+  "user": {
+    "location": "Canada"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f0d"
+  },
+  "created_at": "Sun Oct 25 22:40:43 +0000 2020",
+  "user": {
+    "location": "simping HeWhoErases & Yellmada"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f0e"
+  },
+  "created_at": "Sun Oct 25 22:40:43 +0000 2020",
+  "user": {
+    "location": "Cardiff, Wales"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f0f"
+  },
+  "created_at": "Sun Oct 25 22:40:40 +0000 2020",
+  "user": {
+    "location": "nineteen"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f10"
+  },
+  "created_at": "Sun Oct 25 22:40:38 +0000 2020",
+  "user": {
+    "location": "Valencia, Spain"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f11"
+  },
+  "created_at": "Sun Oct 25 22:40:38 +0000 2020",
+  "user": {
+    "location": "(he/him) Houston, Texas"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f12"
+  },
+  "created_at": "Sun Oct 25 22:40:37 +0000 2020",
+  "user": {
+    "location": "Los Angeles, CA"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f13"
+  },
+  "created_at": "Sun Oct 25 22:40:35 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff413abbe0f15ec69f14"
+  },
+  "created_at": "Sun Oct 25 22:40:31 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f15"
+  },
+  "created_at": "Sun Oct 25 22:40:29 +0000 2020",
+  "user": {
+    "location": "Nigeria"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f16"
+  },
+  "created_at": "Sun Oct 25 22:40:29 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f17"
+  },
+  "created_at": "Sun Oct 25 22:40:29 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f18"
+  },
+  "created_at": "Sun Oct 25 22:40:27 +0000 2020",
+  "user": {
+    "location": "Montreal🇨🇦"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f19"
+  },
+  "created_at": "Sun Oct 25 22:40:22 +0000 2020",
+  "user": {
+    "location": "she/her l BLM l 21 "
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f1a"
+  },
+  "created_at": "Sun Oct 25 22:40:21 +0000 2020",
+  "user": {
+    "location": "Utah, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f1b"
+  },
+  "created_at": "Sun Oct 25 22:40:21 +0000 2020",
+  "user": {
+    "location": "Indiana, USA   she/they"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f1c"
+  },
+  "created_at": "Sun Oct 25 22:40:14 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f1d"
+  },
+  "created_at": "Sun Oct 25 22:40:14 +0000 2020",
+  "user": {
+    "location": "San Diego, CA"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f1e"
+  },
+  "created_at": "Sun Oct 25 22:40:11 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f1f"
+  },
+  "created_at": "Sun Oct 25 22:40:10 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f20"
+  },
+  "created_at": "Sun Oct 25 22:40:08 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f21"
+  },
+  "created_at": "Sun Oct 25 22:40:06 +0000 2020",
+  "user": {
+    "location": "20↑, she/her, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f22"
+  },
+  "created_at": "Sun Oct 25 22:40:04 +0000 2020",
+  "user": {
+    "location": "oak condos x she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff423abbe0f15ec69f23"
+  },
+  "created_at": "Sun Oct 25 22:40:04 +0000 2020",
+  "user": {
+    "location": "lord death's basement"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f24"
+  },
+  "created_at": "Sun Oct 25 22:40:03 +0000 2020",
+  "user": {
+    "location": "England"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f25"
+  },
+  "created_at": "Sun Oct 25 22:40:00 +0000 2020",
+  "user": {
+    "location": "14| she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f26"
+  },
+  "created_at": "Sun Oct 25 22:39:59 +0000 2020",
+  "user": {
+    "location": "she/they/moon/fox ★"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f27"
+  },
+  "created_at": "Sun Oct 25 22:39:57 +0000 2020",
+  "user": {
+    "location": "Canada"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f28"
+  },
+  "created_at": "Sun Oct 25 22:39:51 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f29"
+  },
+  "created_at": "Sun Oct 25 22:39:49 +0000 2020",
+  "user": {
+    "location": "TEXAS"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f2a"
+  },
+  "created_at": "Sun Oct 25 22:39:48 +0000 2020",
+  "user": {
+    "location": "area 51"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f2b"
+  },
+  "created_at": "Sun Oct 25 22:39:47 +0000 2020",
+  "user": {
+    "location": "17 | jewel ♡"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f2c"
+  },
+  "created_at": "Sun Oct 25 22:39:47 +0000 2020",
+  "user": {
+    "location": "Boston-ish"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f2d"
+  },
+  "created_at": "Sun Oct 25 22:39:46 +0000 2020",
+  "user": {
+    "location": "twitch.tv/paperboxhouse"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff433abbe0f15ec69f2e"
+  },
+  "created_at": "Sun Oct 25 22:39:45 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f2f"
+  },
+  "created_at": "Sun Oct 25 22:39:44 +0000 2020",
+  "user": {
+    "location": "isfp"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f30"
+  },
+  "created_at": "Sun Oct 25 22:39:43 +0000 2020",
+  "user": {
+    "location": "4/4 | a ☆🧷| minor"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f31"
+  },
+  "created_at": "Sun Oct 25 22:39:40 +0000 2020",
+  "user": {
+    "location": "he/him"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f32"
+  },
+  "created_at": "Sun Oct 25 22:39:40 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f33"
+  },
+  "created_at": "Sun Oct 25 22:39:39 +0000 2020",
+  "user": {
+    "location": "Beverly Hills"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f34"
+  },
+  "created_at": "Sun Oct 25 22:39:38 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f35"
+  },
+  "created_at": "Sun Oct 25 22:39:35 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f36"
+  },
+  "created_at": "Sun Oct 25 22:39:35 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f37"
+  },
+  "created_at": "Sun Oct 25 22:39:35 +0000 2020",
+  "user": {
+    "location": "— she / her"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff443abbe0f15ec69f38"
+  },
+  "created_at": "Sun Oct 25 22:39:34 +0000 2020",
+  "user": {
+    "location": "simp city"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff453abbe0f15ec69f39"
+  },
+  "created_at": "Sun Oct 25 22:39:29 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff453abbe0f15ec69f3a"
+  },
+  "created_at": "Sun Oct 25 22:39:26 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff453abbe0f15ec69f3b"
+  },
+  "created_at": "Sun Oct 25 22:39:24 +0000 2020",
+  "user": {
+    "location": "Franklin, TN"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff453abbe0f15ec69f3c"
+  },
+  "created_at": "Sun Oct 25 22:39:21 +0000 2020",
+  "user": {
+    "location": "Princess Daisy 1st Win"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff453abbe0f15ec69f3d"
+  },
+  "created_at": "Sun Oct 25 22:39:20 +0000 2020",
+  "user": {
+    "location": "THE BLUFF CITY— 9 0 1"
+  }
+},{
+  "_id": {
+    "$oid": "5f95ff453abbe0f15ec69f3e"
+  },
+  "created_at": "Sun Oct 25 22:39:16 +0000 2020",
+  "user": {
+    "location": "United Kingdom"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfbe"
+  },
+  "created_at": "Sun Oct 25 22:48:22 +0000 2020",
+  "user": {
+    "location": "Rancho Mirage, Ca"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfbf"
+  },
+  "created_at": "Sun Oct 25 22:48:22 +0000 2020",
+  "user": {
+    "location": "Ohio"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc0"
+  },
+  "created_at": "Sun Oct 25 22:48:21 +0000 2020",
+  "user": {
+    "location": "Sunnyvale, CA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc1"
+  },
+  "created_at": "Sun Oct 25 22:48:20 +0000 2020",
+  "user": {
+    "location": "Earth "
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc2"
+  },
+  "created_at": "Sun Oct 25 22:48:20 +0000 2020",
+  "user": {
+    "location": "Con mis Buiz. "
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc3"
+  },
+  "created_at": "Sun Oct 25 22:48:19 +0000 2020",
+  "user": {
+    "location": "Cameroon"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc4"
+  },
+  "created_at": "Sun Oct 25 22:48:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc5"
+  },
+  "created_at": "Sun Oct 25 22:48:18 +0000 2020",
+  "user": {
+    "location": "UK. Sometimes Green Hill"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc6"
+  },
+  "created_at": "Sun Oct 25 22:48:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc7"
+  },
+  "created_at": "Sun Oct 25 22:48:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc8"
+  },
+  "created_at": "Sun Oct 25 22:48:18 +0000 2020",
+  "user": {
+    "location": "Chicago,IL.U.S.A"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfc9"
+  },
+  "created_at": "Sun Oct 25 22:48:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b807e7eacbdfa4cfca"
+  },
+  "created_at": "Sun Oct 25 22:48:17 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfcb"
+  },
+  "created_at": "Sun Oct 25 22:48:17 +0000 2020",
+  "user": {
+    "location": "Arkansas, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfcc"
+  },
+  "created_at": "Sun Oct 25 22:48:17 +0000 2020",
+  "user": {
+    "location": "Somewhere under the sun"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfcd"
+  },
+  "created_at": "Sun Oct 25 22:48:17 +0000 2020",
+  "user": {
+    "location": "France"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfce"
+  },
+  "created_at": "Sun Oct 25 22:48:15 +0000 2020",
+  "user": {
+    "location": "Arlington, Texas"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfcf"
+  },
+  "created_at": "Sun Oct 25 22:48:15 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd0"
+  },
+  "created_at": "Sun Oct 25 22:48:14 +0000 2020",
+  "user": {
+    "location": "Beekmantown, NY"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd1"
+  },
+  "created_at": "Sun Oct 25 22:48:14 +0000 2020",
+  "user": {
+    "location": "Leslieville, Toronto"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd2"
+  },
+  "created_at": "Sun Oct 25 22:48:14 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd3"
+  },
+  "created_at": "Sun Oct 25 22:48:14 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd4"
+  },
+  "created_at": "Sun Oct 25 22:48:13 +0000 2020",
+  "user": {
+    "location": "New Zealand"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd5"
+  },
+  "created_at": "Sun Oct 25 22:48:13 +0000 2020",
+  "user": {
+    "location": "Colorado"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd6"
+  },
+  "created_at": "Sun Oct 25 22:48:13 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600b907e7eacbdfa4cfd7"
+  },
+  "created_at": "Sun Oct 25 22:48:13 +0000 2020",
+  "user": {
+    "location": "Bardo, Tunisia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfd8"
+  },
+  "created_at": "Sun Oct 25 22:48:12 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfd9"
+  },
+  "created_at": "Sun Oct 25 22:48:12 +0000 2020",
+  "user": {
+    "location": "☀️ mark + miriam + cassie"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfda"
+  },
+  "created_at": "Sun Oct 25 22:48:12 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfdb"
+  },
+  "created_at": "Sun Oct 25 22:48:12 +0000 2020",
+  "user": {
+    "location": "Never Never Land"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfdc"
+  },
+  "created_at": "Sun Oct 25 22:48:11 +0000 2020",
+  "user": {
+    "location": "Sacramento, CA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfdd"
+  },
+  "created_at": "Sun Oct 25 22:48:11 +0000 2020",
+  "user": {
+    "location": "New York"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfde"
+  },
+  "created_at": "Sun Oct 25 22:48:10 +0000 2020",
+  "user": {
+    "location": "Maine, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfdf"
+  },
+  "created_at": "Sun Oct 25 22:48:10 +0000 2020",
+  "user": {
+    "location": "New York, NY"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfe0"
+  },
+  "created_at": "Sun Oct 25 22:48:09 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfe1"
+  },
+  "created_at": "Sun Oct 25 22:48:09 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600ba07e7eacbdfa4cfe2"
+  },
+  "created_at": "Sun Oct 25 22:48:09 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe3"
+  },
+  "created_at": "Sun Oct 25 22:48:07 +0000 2020",
+  "user": {
+    "location": "Montreal"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe4"
+  },
+  "created_at": "Sun Oct 25 22:48:07 +0000 2020",
+  "user": {
+    "location": "Cameroon"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe5"
+  },
+  "created_at": "Sun Oct 25 22:48:07 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe6"
+  },
+  "created_at": "Sun Oct 25 22:48:07 +0000 2020",
+  "user": {
+    "location": "Davenport, IA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe7"
+  },
+  "created_at": "Sun Oct 25 22:48:07 +0000 2020",
+  "user": {
+    "location": "Swansea, Ma."
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe8"
+  },
+  "created_at": "Sun Oct 25 22:48:06 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfe9"
+  },
+  "created_at": "Sun Oct 25 22:48:06 +0000 2020",
+  "user": {
+    "location": "Lalaland"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfea"
+  },
+  "created_at": "Sun Oct 25 22:48:06 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfeb"
+  },
+  "created_at": "Sun Oct 25 22:48:06 +0000 2020",
+  "user": {
+    "location": "Living in London, UK"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfec"
+  },
+  "created_at": "Sun Oct 25 22:48:06 +0000 2020",
+  "user": {
+    "location": "Davenport, Iowa"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bb07e7eacbdfa4cfed"
+  },
+  "created_at": "Sun Oct 25 22:48:05 +0000 2020",
+  "user": {
+    "location": "São Paulo Brasil"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cfee"
+  },
+  "created_at": "Sun Oct 25 22:48:05 +0000 2020",
+  "user": {
+    "location": "Singapore"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cfef"
+  },
+  "created_at": "Sun Oct 25 22:48:05 +0000 2020",
+  "user": {
+    "location": "Austria"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff0"
+  },
+  "created_at": "Sun Oct 25 22:48:05 +0000 2020",
+  "user": {
+    "location": "Bristol"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff1"
+  },
+  "created_at": "Sun Oct 25 22:48:05 +0000 2020",
+  "user": {
+    "location": "Moline, IL"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff2"
+  },
+  "created_at": "Sun Oct 25 22:48:04 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff3"
+  },
+  "created_at": "Sun Oct 25 22:48:04 +0000 2020",
+  "user": {
+    "location": "Singapore"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff4"
+  },
+  "created_at": "Sun Oct 25 22:48:04 +0000 2020",
+  "user": {
+    "location": "Marlborough, New Zealand."
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff5"
+  },
+  "created_at": "Sun Oct 25 22:48:03 +0000 2020",
+  "user": {
+    "location": "St. John, USVI"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff6"
+  },
+  "created_at": "Sun Oct 25 22:48:03 +0000 2020",
+  "user": {
+    "location": "Burbank, CA, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff7"
+  },
+  "created_at": "Sun Oct 25 22:48:03 +0000 2020",
+  "user": {
+    "location": "SHE ⵣ HER"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff8"
+  },
+  "created_at": "Sun Oct 25 22:48:03 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bc07e7eacbdfa4cff9"
+  },
+  "created_at": "Sun Oct 25 22:48:03 +0000 2020",
+  "user": {
+    "location": "Long Island, New York"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4cffa"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "Bay of Plenty, NZ"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4cffb"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4cffc"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "Singapore"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4cffd"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "Toledo, OH  USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4cffe"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "aaaaaaa"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4cfff"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "SHOWME state USA.          "
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4d000"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4d001"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "Chilliwack"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4d002"
+  },
+  "created_at": "Sun Oct 25 22:48:02 +0000 2020",
+  "user": {
+    "location": "New York, New York"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4d003"
+  },
+  "created_at": "Sun Oct 25 22:48:01 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4d004"
+  },
+  "created_at": "Sun Oct 25 22:48:00 +0000 2020",
+  "user": {
+    "location": "Palo Alto, CA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bd07e7eacbdfa4d005"
+  },
+  "created_at": "Sun Oct 25 22:48:00 +0000 2020",
+  "user": {
+    "location": "North Carolina USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d006"
+  },
+  "created_at": "Sun Oct 25 22:48:00 +0000 2020",
+  "user": {
+    "location": "🌍"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d007"
+  },
+  "created_at": "Sun Oct 25 22:48:00 +0000 2020",
+  "user": {
+    "location": "London"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d008"
+  },
+  "created_at": "Sun Oct 25 22:47:59 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d009"
+  },
+  "created_at": "Sun Oct 25 22:47:58 +0000 2020",
+  "user": {
+    "location": "middle-ohio to chicago"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d00a"
+  },
+  "created_at": "Sun Oct 25 22:47:58 +0000 2020",
+  "user": {
+    "location": "Washington DC"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d00b"
+  },
+  "created_at": "Sun Oct 25 22:47:58 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d00c"
+  },
+  "created_at": "Sun Oct 25 22:47:58 +0000 2020",
+  "user": {
+    "location": "San Francisco Bay Area"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d00d"
+  },
+  "created_at": "Sun Oct 25 22:47:58 +0000 2020",
+  "user": {
+    "location": "ÜT: 43.194969,-79.547057"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d00e"
+  },
+  "created_at": "Sun Oct 25 22:47:57 +0000 2020",
+  "user": {
+    "location": "NYC: New York Country, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d00f"
+  },
+  "created_at": "Sun Oct 25 22:47:56 +0000 2020",
+  "user": {
+    "location": "Australia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d010"
+  },
+  "created_at": "Sun Oct 25 22:47:56 +0000 2020",
+  "user": {
+    "location": "Sydney, Australia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d011"
+  },
+  "created_at": "Sun Oct 25 22:47:56 +0000 2020",
+  "user": {
+    "location": "Connecticut"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600be07e7eacbdfa4d012"
+  },
+  "created_at": "Sun Oct 25 22:47:55 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d013"
+  },
+  "created_at": "Sun Oct 25 22:47:55 +0000 2020",
+  "user": {
+    "location": "Miami, FL"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d014"
+  },
+  "created_at": "Sun Oct 25 22:47:55 +0000 2020",
+  "user": {
+    "location": "Bermuda, Triangle"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d015"
+  },
+  "created_at": "Sun Oct 25 22:47:55 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d016"
+  },
+  "created_at": "Sun Oct 25 22:47:54 +0000 2020",
+  "user": {
+    "location": "Toronto, Ontario"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d017"
+  },
+  "created_at": "Sun Oct 25 22:47:54 +0000 2020",
+  "user": {
+    "location": "North Carolina, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d018"
+  },
+  "created_at": "Sun Oct 25 22:47:54 +0000 2020",
+  "user": {
+    "location": "Ballybrack, Dublin"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d019"
+  },
+  "created_at": "Sun Oct 25 22:47:54 +0000 2020",
+  "user": {
+    "location": "Cancer♋️🪐✨🧘🏾‍♂️💌📖"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d01a"
+  },
+  "created_at": "Sun Oct 25 22:47:53 +0000 2020",
+  "user": {
+    "location": "Spokane, WA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d01b"
+  },
+  "created_at": "Sun Oct 25 22:47:53 +0000 2020",
+  "user": {
+    "location": "Lakeland, FL"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d01c"
+  },
+  "created_at": "Sun Oct 25 22:47:51 +0000 2020",
+  "user": {
+    "location": "Meriden, CT"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d01d"
+  },
+  "created_at": "Sun Oct 25 22:47:51 +0000 2020",
+  "user": {
+    "location": "(◠ ᴥ ◠)"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d01e"
+  },
+  "created_at": "Sun Oct 25 22:47:51 +0000 2020",
+  "user": {
+    "location": "Manila, Philippines"
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d01f"
+  },
+  "created_at": "Sun Oct 25 22:47:50 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600bf07e7eacbdfa4d020"
+  },
+  "created_at": "Sun Oct 25 22:47:50 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9600c007e7eacbdfa4d021"
+  },
+  "created_at": "Sun Oct 25 22:47:50 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3000"
+  },
+  "created_at": "Mon Nov 02 09:11:19 +0000 2020",
+  "user": {
+    "location": "Jawa Timur, Indonesia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3001"
+  },
+  "created_at": "Mon Nov 02 09:11:19 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3002"
+  },
+  "created_at": "Mon Nov 02 09:11:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3003"
+  },
+  "created_at": "Mon Nov 02 09:11:18 +0000 2020",
+  "user": {
+    "location": "THEY!THEM"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3004"
+  },
+  "created_at": "Mon Nov 02 09:11:16 +0000 2020",
+  "user": {
+    "location": "Akatsuki"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3005"
+  },
+  "created_at": "Mon Nov 02 09:11:13 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3006"
+  },
+  "created_at": "Mon Nov 02 09:11:12 +0000 2020",
+  "user": {
+    "location": "STAY 1기 "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3007"
+  },
+  "created_at": "Mon Nov 02 09:11:12 +0000 2020",
+  "user": {
+    "location": "𝔀𝓸𝓷𝓭𝓮𝓻𝓵𝓪𝓷𝓭"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3008"
+  },
+  "created_at": "Mon Nov 02 09:11:11 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b3009"
+  },
+  "created_at": "Mon Nov 02 09:11:09 +0000 2020",
+  "user": {
+    "location": ".⋆ฺ｡strictly nsa.18.ily ukie."
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b300a"
+  },
+  "created_at": "Mon Nov 02 09:11:07 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b300b"
+  },
+  "created_at": "Mon Nov 02 09:11:06 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd391952e1ea592b300c"
+  },
+  "created_at": "Mon Nov 02 09:11:04 +0000 2020",
+  "user": {
+    "location": "boymode"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b300d"
+  },
+  "created_at": "Mon Nov 02 09:11:02 +0000 2020",
+  "user": {
+    "location": "japan tokyo"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b300e"
+  },
+  "created_at": "Mon Nov 02 09:11:01 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b300f"
+  },
+  "created_at": "Mon Nov 02 09:11:01 +0000 2020",
+  "user": {
+    "location": "she/her 19★ BLM ACAB"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3010"
+  },
+  "created_at": "Mon Nov 02 09:11:01 +0000 2020",
+  "user": {
+    "location": "i suck at dms sorry ♡ / 18 yo"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3011"
+  },
+  "created_at": "Mon Nov 02 09:11:00 +0000 2020",
+  "user": {
+    "location": "Azeroth"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3012"
+  },
+  "created_at": "Mon Nov 02 09:10:57 +0000 2020",
+  "user": {
+    "location": ".˚🥛  ༘┊͙ 🎀 she ♡︎ her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3013"
+  },
+  "created_at": "Mon Nov 02 09:10:57 +0000 2020",
+  "user": {
+    "location": "martykuy"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3014"
+  },
+  "created_at": "Mon Nov 02 09:10:52 +0000 2020",
+  "user": {
+    "location": "rv "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3015"
+  },
+  "created_at": "Mon Nov 02 09:10:51 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3016"
+  },
+  "created_at": "Mon Nov 02 09:10:50 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3017"
+  },
+  "created_at": "Mon Nov 02 09:10:50 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3a1952e1ea592b3018"
+  },
+  "created_at": "Mon Nov 02 09:10:45 +0000 2020",
+  "user": {
+    "location": "Portland, OR"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b3019"
+  },
+  "created_at": "Mon Nov 02 09:10:45 +0000 2020",
+  "user": {
+    "location": "Shanghai"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b301a"
+  },
+  "created_at": "Mon Nov 02 09:10:44 +0000 2020",
+  "user": {
+    "location": " she/her ;"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b301b"
+  },
+  "created_at": "Mon Nov 02 09:10:43 +0000 2020",
+  "user": {
+    "location": "minor || larrie"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b301c"
+  },
+  "created_at": "Mon Nov 02 09:10:41 +0000 2020",
+  "user": {
+    "location": "gay;; any pronouns!"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b301d"
+  },
+  "created_at": "Mon Nov 02 09:10:38 +0000 2020",
+  "user": {
+    "location": "GOTDAY ULT 🇨🇳🇺🇲"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b301e"
+  },
+  "created_at": "Mon Nov 02 09:10:37 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b301f"
+  },
+  "created_at": "Mon Nov 02 09:10:37 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b3020"
+  },
+  "created_at": "Mon Nov 02 09:10:31 +0000 2020",
+  "user": {
+    "location": "California, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b3021"
+  },
+  "created_at": "Mon Nov 02 09:10:31 +0000 2020",
+  "user": {
+    "location": "Silverstone "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b3022"
+  },
+  "created_at": "Mon Nov 02 09:10:28 +0000 2020",
+  "user": {
+    "location": "she \\ her "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3b1952e1ea592b3023"
+  },
+  "created_at": "Mon Nov 02 09:10:28 +0000 2020",
+  "user": {
+    "location": "23 ; she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b3024"
+  },
+  "created_at": "Mon Nov 02 09:10:27 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b3025"
+  },
+  "created_at": "Mon Nov 02 09:10:27 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b3026"
+  },
+  "created_at": "Mon Nov 02 09:10:26 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b3027"
+  },
+  "created_at": "Mon Nov 02 09:10:24 +0000 2020",
+  "user": {
+    "location": "United States"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b3028"
+  },
+  "created_at": "Mon Nov 02 09:10:22 +0000 2020",
+  "user": {
+    "location": "✦ 그래도 좋은 날이  \n앞으로 많기를 내 말을 믿는다"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b3029"
+  },
+  "created_at": "Mon Nov 02 09:10:21 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b302a"
+  },
+  "created_at": "Mon Nov 02 09:10:18 +0000 2020",
+  "user": {
+    "location": "Kortrijk-Dutsel / London"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b302b"
+  },
+  "created_at": "Mon Nov 02 09:10:18 +0000 2020",
+  "user": {
+    "location": "Jakarta Pusat, DKI Jakarta"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b302c"
+  },
+  "created_at": "Mon Nov 02 09:10:16 +0000 2020",
+  "user": {
+    "location": "🇮🇳🇦🇺 మేఘన ; 04"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b302d"
+  },
+  "created_at": "Mon Nov 02 09:10:15 +0000 2020",
+  "user": {
+    "location": "🐻🐣🐒🐿"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b302e"
+  },
+  "created_at": "Mon Nov 02 09:10:12 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3c1952e1ea592b302f"
+  },
+  "created_at": "Mon Nov 02 09:10:10 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3030"
+  },
+  "created_at": "Mon Nov 02 09:10:08 +0000 2020",
+  "user": {
+    "location": "Alain|AbuDhabi"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3031"
+  },
+  "created_at": "Mon Nov 02 09:10:08 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3032"
+  },
+  "created_at": "Mon Nov 02 09:10:06 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3033"
+  },
+  "created_at": "Mon Nov 02 09:10:02 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3034"
+  },
+  "created_at": "Mon Nov 02 09:10:01 +0000 2020",
+  "user": {
+    "location": "minor | all pronouns | seasian"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3035"
+  },
+  "created_at": "Mon Nov 02 09:10:01 +0000 2020",
+  "user": {
+    "location": "she/her// Minor//✨Bisexual✨"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3036"
+  },
+  "created_at": "Mon Nov 02 09:10:01 +0000 2020",
+  "user": {
+    "location": "Ibadan//lagos nigeria"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3037"
+  },
+  "created_at": "Mon Nov 02 09:10:01 +0000 2020",
+  "user": {
+    "location": "ot6"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3038"
+  },
+  "created_at": "Mon Nov 02 09:10:00 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b3039"
+  },
+  "created_at": "Mon Nov 02 09:10:00 +0000 2020",
+  "user": {
+    "location": "2020.10.02"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b303a"
+  },
+  "created_at": "Mon Nov 02 09:09:58 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3d1952e1ea592b303b"
+  },
+  "created_at": "Mon Nov 02 09:09:56 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b303c"
+  },
+  "created_at": "Mon Nov 02 09:09:54 +0000 2020",
+  "user": {
+    "location": "박우진 (ღˇ◡ˇ*)♡"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b303d"
+  },
+  "created_at": "Mon Nov 02 09:09:53 +0000 2020",
+  "user": {
+    "location": "Bengaluru, India"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b303e"
+  },
+  "created_at": "Mon Nov 02 09:09:53 +0000 2020",
+  "user": {
+    "location": "☕ - he/him 🥐 - he/they"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b303f"
+  },
+  "created_at": "Mon Nov 02 09:09:53 +0000 2020",
+  "user": {
+    "location": "she/her | 🩺•⚖️"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3040"
+  },
+  "created_at": "Mon Nov 02 09:09:52 +0000 2020",
+  "user": {
+    "location": "Her/She"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3041"
+  },
+  "created_at": "Mon Nov 02 09:09:51 +0000 2020",
+  "user": {
+    "location": "she/her "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3042"
+  },
+  "created_at": "Mon Nov 02 09:09:50 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3043"
+  },
+  "created_at": "Mon Nov 02 09:09:49 +0000 2020",
+  "user": {
+    "location": "he/him - ph."
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3044"
+  },
+  "created_at": "Mon Nov 02 09:09:48 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3045"
+  },
+  "created_at": "Mon Nov 02 09:09:47 +0000 2020",
+  "user": {
+    "location": "Delhi"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3046"
+  },
+  "created_at": "Mon Nov 02 09:09:46 +0000 2020",
+  "user": {
+    "location": "hoshi gf btw"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3047"
+  },
+  "created_at": "Mon Nov 02 09:09:45 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3048"
+  },
+  "created_at": "Mon Nov 02 09:09:39 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b3049"
+  },
+  "created_at": "Mon Nov 02 09:09:39 +0000 2020",
+  "user": {
+    "location": "she/her| 17| muslim "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3e1952e1ea592b304a"
+  },
+  "created_at": "Mon Nov 02 09:09:37 +0000 2020",
+  "user": {
+    "location": "she 〜 emmie & nad "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b304b"
+  },
+  "created_at": "Mon Nov 02 09:09:35 +0000 2020",
+  "user": {
+    "location": "mostar otel 408 numara"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b304c"
+  },
+  "created_at": "Mon Nov 02 09:09:32 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b304d"
+  },
+  "created_at": "Mon Nov 02 09:09:31 +0000 2020",
+  "user": {
+    "location": "20 she/her "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b304e"
+  },
+  "created_at": "Mon Nov 02 09:09:24 +0000 2020",
+  "user": {
+    "location": "Ibadan//lagos nigeria"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b304f"
+  },
+  "created_at": "Mon Nov 02 09:09:21 +0000 2020",
+  "user": {
+    "location": "Waschbären-Hauptstadt. "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3050"
+  },
+  "created_at": "Mon Nov 02 09:09:21 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3051"
+  },
+  "created_at": "Mon Nov 02 09:09:19 +0000 2020",
+  "user": {
+    "location": "India"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3052"
+  },
+  "created_at": "Mon Nov 02 09:09:17 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3053"
+  },
+  "created_at": "Mon Nov 02 09:09:14 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3054"
+  },
+  "created_at": "Mon Nov 02 09:09:13 +0000 2020",
+  "user": {
+    "location": "Bristol, England"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3055"
+  },
+  "created_at": "Mon Nov 02 09:09:13 +0000 2020",
+  "user": {
+    "location": "he/him 17"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3056"
+  },
+  "created_at": "Mon Nov 02 09:09:11 +0000 2020",
+  "user": {
+    "location": "anywhere"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3057"
+  },
+  "created_at": "Mon Nov 02 09:09:10 +0000 2020",
+  "user": {
+    "location": "United States"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3058"
+  },
+  "created_at": "Mon Nov 02 09:09:10 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd3f1952e1ea592b3059"
+  },
+  "created_at": "Mon Nov 02 09:09:08 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b305a"
+  },
+  "created_at": "Mon Nov 02 09:09:08 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b305b"
+  },
+  "created_at": "Mon Nov 02 09:09:04 +0000 2020",
+  "user": {
+    "location": "six feet under"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b305c"
+  },
+  "created_at": "Mon Nov 02 09:09:03 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b305d"
+  },
+  "created_at": "Mon Nov 02 09:08:58 +0000 2020",
+  "user": {
+    "location": "California, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b305e"
+  },
+  "created_at": "Mon Nov 02 09:08:57 +0000 2020",
+  "user": {
+    "location": "Melbourne, Victoria, Australia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b305f"
+  },
+  "created_at": "Mon Nov 02 09:08:57 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b3060"
+  },
+  "created_at": "Mon Nov 02 09:08:54 +0000 2020",
+  "user": {
+    "location": "Ibadan//lagos nigeria"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b3061"
+  },
+  "created_at": "Mon Nov 02 09:08:53 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b3062"
+  },
+  "created_at": "Mon Nov 02 09:08:51 +0000 2020",
+  "user": {
+    "location": "Up on that hill/in S.E. France"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcd401952e1ea592b3063"
+  },
+  "created_at": "Mon Nov 02 09:08:39 +0000 2020",
+  "user": {
+    "location": "fay a she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa67ac7c97941150424"
+  },
+  "created_at": "Mon Nov 02 09:21:40 +0000 2020",
+  "user": {
+    "location": "Newcastle upon Tyne"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150425"
+  },
+  "created_at": "Mon Nov 02 09:21:39 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150426"
+  },
+  "created_at": "Mon Nov 02 09:21:39 +0000 2020",
+  "user": {
+    "location": "In a cloud"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150427"
+  },
+  "created_at": "Mon Nov 02 09:21:36 +0000 2020",
+  "user": {
+    "location": "Diliman x Iriga "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150428"
+  },
+  "created_at": "Mon Nov 02 09:21:34 +0000 2020",
+  "user": {
+    "location": "Adrestian Empire"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150429"
+  },
+  "created_at": "Mon Nov 02 09:21:31 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c9794115042a"
+  },
+  "created_at": "Mon Nov 02 09:21:26 +0000 2020",
+  "user": {
+    "location": "multi || she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c9794115042b"
+  },
+  "created_at": "Mon Nov 02 09:21:24 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c9794115042c"
+  },
+  "created_at": "Mon Nov 02 09:21:23 +0000 2020",
+  "user": {
+    "location": "Penang Malaysia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c9794115042d"
+  },
+  "created_at": "Mon Nov 02 09:21:23 +0000 2020",
+  "user": {
+    "location": "SHE!HER% 🇵🇭"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c9794115042e"
+  },
+  "created_at": "Mon Nov 02 09:21:23 +0000 2020",
+  "user": {
+    "location": "In ur heart, baby"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c9794115042f"
+  },
+  "created_at": "Mon Nov 02 09:21:22 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150430"
+  },
+  "created_at": "Mon Nov 02 09:21:22 +0000 2020",
+  "user": {
+    "location": "California, USA"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150431"
+  },
+  "created_at": "Mon Nov 02 09:21:22 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa77ac7c97941150432"
+  },
+  "created_at": "Mon Nov 02 09:21:22 +0000 2020",
+  "user": {
+    "location": "she/her  17"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150433"
+  },
+  "created_at": "Mon Nov 02 09:21:21 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150434"
+  },
+  "created_at": "Mon Nov 02 09:21:18 +0000 2020",
+  "user": {
+    "location": "she/her "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150435"
+  },
+  "created_at": "Mon Nov 02 09:21:14 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150436"
+  },
+  "created_at": "Mon Nov 02 09:21:12 +0000 2020",
+  "user": {
+    "location": "Justin follows♡     she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150437"
+  },
+  "created_at": "Mon Nov 02 09:21:11 +0000 2020",
+  "user": {
+    "location": "i know i'm not your only, but at least i'm one i heard a little love is better than none"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150438"
+  },
+  "created_at": "Mon Nov 02 09:21:10 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150439"
+  },
+  "created_at": "Mon Nov 02 09:21:06 +0000 2020",
+  "user": {
+    "location": "💜💜💜💜💗💛💙💚💜"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c9794115043a"
+  },
+  "created_at": "Mon Nov 02 09:21:05 +0000 2020",
+  "user": {
+    "location": "ショート！"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c9794115043b"
+  },
+  "created_at": "Mon Nov 02 09:21:00 +0000 2020",
+  "user": {
+    "location": "SUSHANT"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c9794115043c"
+  },
+  "created_at": "Mon Nov 02 09:20:59 +0000 2020",
+  "user": {
+    "location": "London, England"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c9794115043d"
+  },
+  "created_at": "Mon Nov 02 09:20:59 +0000 2020",
+  "user": {
+    "location": "CALL"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c9794115043e"
+  },
+  "created_at": "Mon Nov 02 09:20:59 +0000 2020",
+  "user": {
+    "location": "Kolkata, India"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c9794115043f"
+  },
+  "created_at": "Mon Nov 02 09:20:57 +0000 2020",
+  "user": {
+    "location": "Frick, Schweiz"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150440"
+  },
+  "created_at": "Mon Nov 02 09:20:56 +0000 2020",
+  "user": {
+    "location": "🇦🇺 : 19"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa87ac7c97941150441"
+  },
+  "created_at": "Mon Nov 02 09:20:56 +0000 2020",
+  "user": {
+    "location": "Newcastle upon Tyne, UK"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150442"
+  },
+  "created_at": "Mon Nov 02 09:20:53 +0000 2020",
+  "user": {
+    "location": "flirthoes, luetangs ♡╎나의 절망 끝에 결국 내가 널 찾았음을 잊지마 넌 절벽 끝에 서 있던 내 마지막 이유야 live 내가 나인 게 싫은 날 영영 사라지고 싶은 날 문을 하나 만들자 너의 맘 속에 다 그 문을 열고 들어가면 이 곳이 기다릴 거야"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150443"
+  },
+  "created_at": "Mon Nov 02 09:20:52 +0000 2020",
+  "user": {
+    "location": "any pronouns !! minor"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150444"
+  },
+  "created_at": "Mon Nov 02 09:20:50 +0000 2020",
+  "user": {
+    "location": "jen♡my naruto | M"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150445"
+  },
+  "created_at": "Mon Nov 02 09:20:50 +0000 2020",
+  "user": {
+    "location": "HE!XE!VAMP"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150446"
+  },
+  "created_at": "Mon Nov 02 09:20:49 +0000 2020",
+  "user": {
+    "location": "she/her • 98's • check pinned"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150447"
+  },
+  "created_at": "Mon Nov 02 09:20:47 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150448"
+  },
+  "created_at": "Mon Nov 02 09:20:45 +0000 2020",
+  "user": {
+    "location": "La"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c97941150449"
+  },
+  "created_at": "Mon Nov 02 09:20:43 +0000 2020",
+  "user": {
+    "location": "Bhubaneswar, India "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c9794115044a"
+  },
+  "created_at": "Mon Nov 02 09:20:43 +0000 2020",
+  "user": {
+    "location": "✈️ "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c9794115044b"
+  },
+  "created_at": "Mon Nov 02 09:20:42 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c9794115044c"
+  },
+  "created_at": "Mon Nov 02 09:20:42 +0000 2020",
+  "user": {
+    "location": "ショート！"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c9794115044d"
+  },
+  "created_at": "Mon Nov 02 09:20:40 +0000 2020",
+  "user": {
+    "location": "they/them"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c9794115044e"
+  },
+  "created_at": "Mon Nov 02 09:20:40 +0000 2020",
+  "user": {
+    "location": "peepeepoopoo"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfa97ac7c9794115044f"
+  },
+  "created_at": "Mon Nov 02 09:20:40 +0000 2020",
+  "user": {
+    "location": "JAYLAND"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150450"
+  },
+  "created_at": "Mon Nov 02 09:20:37 +0000 2020",
+  "user": {
+    "location": "- 254H03M - | she/her "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150451"
+  },
+  "created_at": "Mon Nov 02 09:20:37 +0000 2020",
+  "user": {
+    "location": "Republic of the Philippines"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150452"
+  },
+  "created_at": "Mon Nov 02 09:20:33 +0000 2020",
+  "user": {
+    "location": "Asansol, India"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150453"
+  },
+  "created_at": "Mon Nov 02 09:20:33 +0000 2020",
+  "user": {
+    "location": "Las Vegas, NV"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150454"
+  },
+  "created_at": "Mon Nov 02 09:20:29 +0000 2020",
+  "user": {
+    "location": "Barcelona, Catalonia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150455"
+  },
+  "created_at": "Mon Nov 02 09:20:28 +0000 2020",
+  "user": {
+    "location": "19 :))"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150456"
+  },
+  "created_at": "Mon Nov 02 09:20:27 +0000 2020",
+  "user": {
+    "location": "BTS!POP 💿"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150457"
+  },
+  "created_at": "Mon Nov 02 09:20:25 +0000 2020",
+  "user": {
+    "location": "– switching the positions for you cooking in the kitchen and im in the bedroom im in the olympics way im jumping through hoops know my love infinite "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150458"
+  },
+  "created_at": "Mon Nov 02 09:20:23 +0000 2020",
+  "user": {
+    "location": "MINOR ?!"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c97941150459"
+  },
+  "created_at": "Mon Nov 02 09:20:21 +0000 2020",
+  "user": {
+    "location": "she/her "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfaa7ac7c9794115045a"
+  },
+  "created_at": "Mon Nov 02 09:20:20 +0000 2020",
+  "user": {
+    "location": " "
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c9794115045b"
+  },
+  "created_at": "Mon Nov 02 09:20:19 +0000 2020",
+  "user": {
+    "location": "star shopping"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c9794115045c"
+  },
+  "created_at": "Mon Nov 02 09:20:18 +0000 2020",
+  "user": {
+    "location": "SHEHERFILO!? read carrd byf"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c9794115045d"
+  },
+  "created_at": "Mon Nov 02 09:20:17 +0000 2020",
+  "user": {
+    "location": "ショート！"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c9794115045e"
+  },
+  "created_at": "Mon Nov 02 09:20:08 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c9794115045f"
+  },
+  "created_at": "Mon Nov 02 09:20:06 +0000 2020",
+  "user": {
+    "location": "Indonesia"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150460"
+  },
+  "created_at": "Mon Nov 02 09:20:05 +0000 2020",
+  "user": {
+    "location": "zouie // you’re safe here ☀︎︎"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150461"
+  },
+  "created_at": "Mon Nov 02 09:20:03 +0000 2020",
+  "user": {
+    "location": "Damn it!"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150462"
+  },
+  "created_at": "Mon Nov 02 09:20:01 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150463"
+  },
+  "created_at": "Mon Nov 02 09:19:59 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150464"
+  },
+  "created_at": "Mon Nov 02 09:19:58 +0000 2020",
+  "user": {
+    "location": "she/they"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150465"
+  },
+  "created_at": "Mon Nov 02 09:19:56 +0000 2020",
+  "user": {
+    "location": "Genovia // Yugoslavia // Corea"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfab7ac7c97941150466"
+  },
+  "created_at": "Mon Nov 02 09:19:56 +0000 2020",
+  "user": {
+    "location": "'05"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c97941150467"
+  },
+  "created_at": "Mon Nov 02 09:19:56 +0000 2020",
+  "user": {
+    "location": "she|her •multi|🇵🇭"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c97941150468"
+  },
+  "created_at": "Mon Nov 02 09:19:52 +0000 2020",
+  "user": {
+    "location": "ᵐᵘⁿᵈᵒ"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c97941150469"
+  },
+  "created_at": "Mon Nov 02 09:19:48 +0000 2020",
+  "user": {
+    "location": "\n\n\nHAECHAN LOML\nnoms — ashley\nstar ;; sky lomls ☼︎ \ncloud ☆ cass !! \n彩虹是和你再见的誓言\n飘过初雪到仲夏的夜\n直到和你眼神交会\n拥抱让我遗落寂寞\n\n"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c9794115046a"
+  },
+  "created_at": "Mon Nov 02 09:19:45 +0000 2020",
+  "user": {
+    "location": "bts she/her 19"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c9794115046b"
+  },
+  "created_at": "Mon Nov 02 09:19:42 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c9794115046c"
+  },
+  "created_at": "Mon Nov 02 09:19:41 +0000 2020",
+  "user": {
+    "location": "She/her, NCity✧*。"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c9794115046d"
+  },
+  "created_at": "Mon Nov 02 09:19:39 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c9794115046e"
+  },
+  "created_at": "Mon Nov 02 09:19:34 +0000 2020",
+  "user": {
+    "location": "Phoenix, AZ"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c9794115046f"
+  },
+  "created_at": "Mon Nov 02 09:19:29 +0000 2020",
+  "user": {
+    "location": "Mombasa, Kenya"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c97941150470"
+  },
+  "created_at": "Mon Nov 02 09:19:25 +0000 2020",
+  "user": {
+    "location": "ym​ vm​ km​ tg​"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c97941150471"
+  },
+  "created_at": "Mon Nov 02 09:19:24 +0000 2020",
+  "user": {
+    "location": "Wirral, UK"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfac7ac7c97941150472"
+  },
+  "created_at": "Mon Nov 02 09:19:23 +0000 2020",
+  "user": {
+    "location": " 🇵🇭"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150473"
+  },
+  "created_at": "Mon Nov 02 09:19:22 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150474"
+  },
+  "created_at": "Mon Nov 02 09:19:21 +0000 2020",
+  "user": {
+    "location": "(she/her)"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150475"
+  },
+  "created_at": "Mon Nov 02 09:19:19 +0000 2020",
+  "user": {
+    "location": "Jaipur 302026, RJ"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150476"
+  },
+  "created_at": "Mon Nov 02 09:19:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150477"
+  },
+  "created_at": "Mon Nov 02 09:19:18 +0000 2020",
+  "user": {
+    "location": "she/her"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150478"
+  },
+  "created_at": "Mon Nov 02 09:19:18 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c97941150479"
+  },
+  "created_at": "Mon Nov 02 09:19:17 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c9794115047a"
+  },
+  "created_at": "Mon Nov 02 09:19:16 +0000 2020",
+  "user": {
+    "location": "magic shop"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c9794115047b"
+  },
+  "created_at": "Mon Nov 02 09:19:15 +0000 2020",
+  "user": {
+    "location": "India"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c9794115047c"
+  },
+  "created_at": "Mon Nov 02 09:19:13 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c9794115047d"
+  },
+  "created_at": "Mon Nov 02 09:19:13 +0000 2020",
+  "user": {
+    "location": "Paris, France"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfad7ac7c9794115047e"
+  },
+  "created_at": "Mon Nov 02 09:19:12 +0000 2020",
+  "user": {
+    "location": "Turin, Italy"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c9794115047f"
+  },
+  "created_at": "Mon Nov 02 09:19:12 +0000 2020",
+  "user": {
+    "location": "Bangalore / Delhi"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150480"
+  },
+  "created_at": "Mon Nov 02 09:19:11 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150481"
+  },
+  "created_at": "Mon Nov 02 09:19:10 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150482"
+  },
+  "created_at": "Mon Nov 02 09:19:09 +0000 2020",
+  "user": {
+    "location": "California ଓ"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150483"
+  },
+  "created_at": "Mon Nov 02 09:19:09 +0000 2020",
+  "user": {
+    "location": "any pronouns  pl/eng"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150484"
+  },
+  "created_at": "Mon Nov 02 09:19:06 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150485"
+  },
+  "created_at": "Mon Nov 02 09:19:04 +0000 2020",
+  "user": {
+    "location": "semi ia lawlz  ☻"
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150486"
+  },
+  "created_at": "Mon Nov 02 09:19:04 +0000 2020",
+  "user": {
+    "location": ""
+  }
+},{
+  "_id": {
+    "$oid": "5f9fcfae7ac7c97941150487"
+  },
+  "created_at": "Mon Nov 02 09:19:04 +0000 2020",
+  "user": {
+    "location": "New Horizon"
+  }
+}]
