@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import nltk
 from nltk.corpus import stopwords
 from sklearn import svm
-# from sklearn.linear_model import *
+from sklearn.linear_model import *
 from sklearn.metrics import accuracy_score
 import pickle
 nltk.download('stopwords')
@@ -33,64 +33,65 @@ vectorizer = TfidfVectorizer("english")
 # vectorizer.transform('test')
 # print(type(vectorizer))
 tweet_mat = vectorizer.fit_transform(tweet_data_copy)
-# print(type(tweet_mat))
-pickle.dump(tweet_mat, open('parser.sav', 'wb'))
+# tweet_mat.transform('test')
+print(type(vectorizer))
+pickle.dump(vectorizer, open('parser.sav', 'wb'))
 
 # Splitting into training and testing models
 tweet_train, tweet_test, relevant_norelevant_train, relevant_norelevant_test = \
     train_test_split(tweet_mat, tweet_data['relevance'], test_size=0.33, random_state=100)
 
 #creating svm model and fitting data
-svm_model = svm.SVC()
-svm_model.fit(tweet_train, relevant_norelevant_train)
+# svm_model = svm.SVC()
+# svm_model.fit(tweet_train, relevant_norelevant_train)
 
-#saving model to pickle file
-pickle.dump(svm_model, open('svm_model.sav', 'wb'))
+# #saving model to pickle file
+# pickle.dump(svm_model, open('svm_model.sav', 'wb'))
 
 
-print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, svm_model.predict(tweet_test))))
+# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, svm_model.predict(tweet_test))))
 
 # Comparing models
-# LogisticRegression_model = LogisticRegression(solver='liblinear', penalty='l1')
-# LogisticRegression_model.fit(tweet_train, relevant_norelevant_train)
-# pickle.dump(LogisticRegression_model, open('logisticregression.sav', 'wb'))
+LogisticRegression_model = LogisticRegression(solver='liblinear', penalty='l1')
+LogisticRegression_model.fit(tweet_train, relevant_norelevant_train)
+pickle.dump(LogisticRegression_model, open('logisticregression.sav', 'wb'))
 
-# RidgeClassifier_model = RidgeClassifier(solver='sparse_cg', copy_X=True)
-# RidgeClassifier_model.fit(tweet_train, relevant_norelevant_train)
-# pickle.dump(RidgeClassifier_model, open('ridgeclassifier.sav', 'wb'))
+RidgeClassifier_model = RidgeClassifier(solver='sparse_cg', copy_X=True)
+RidgeClassifier_model.fit(tweet_train, relevant_norelevant_train)
+pickle.dump(RidgeClassifier_model, open('ridgeclassifier.sav', 'wb'))
 
-# RidgeClassifierCV_model = RidgeClassifierCV()
-# RidgeClassifierCV_model.fit(tweet_train, relevant_norelevant_train)
-# pickle.dump(RidgeClassifierCV_model, open('ridgeclassifiercv.sav', 'wb'))
-
-
-# Perceptron_model = Perceptron(shuffle=True, penalty='l1')
-# Perceptron_model.fit(tweet_train, relevant_norelevant_train)
-# pickle.dump(Perceptron_model, open('perceptron.sav', 'wb'))
-
-# SGDClassifier_model = SGDClassifier()
-# SGDClassifier_model.fit(tweet_train, relevant_norelevant_train)
-# pickle.dump(SGDClassifier_model, open('sgdclassifier.sav', 'wb'))
-
-# PassiveAggressive_model = PassiveAggressiveClassifier()
-# PassiveAggressive_model.fit(tweet_train, relevant_norelevant_train)
-# pickle.dump(PassiveAggressive_model, open('passiveagressive.sav', 'wb'))
+RidgeClassifierCV_model = RidgeClassifierCV()
+RidgeClassifierCV_model.fit(tweet_train, relevant_norelevant_train)
+pickle.dump(RidgeClassifierCV_model, open('ridgeclassifiercv.sav', 'wb'))
 
 
-# print('LogisticRegression' + '-'*20)
-# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, LogisticRegression_model.predict(tweet_test))))
+Perceptron_model = Perceptron(shuffle=True, penalty='l1')
+Perceptron_model.fit(tweet_train, relevant_norelevant_train)
+pickle.dump(Perceptron_model, open('perceptron.sav', 'wb'))
 
-# print('RidgeClassifier' +'-'*20)
-# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, RidgeClassifier_model.predict(tweet_test))))
+SGDClassifier_model = SGDClassifier()
+SGDClassifier_model.fit(tweet_train, relevant_norelevant_train)
+pickle.dump(SGDClassifier_model, open('sgdclassifier.sav', 'wb'))
 
-# print('RidgeClassifierCV' +'-'*20)
-# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, RidgeClassifierCV_model.predict(tweet_test))))
+PassiveAggressive_model = PassiveAggressiveClassifier()
+PassiveAggressive_model.fit(tweet_train, relevant_norelevant_train)
+pickle.dump(PassiveAggressive_model, open('passiveagressive.sav', 'wb'))
 
-# print('Perceptron' + '-'*20)
-# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, Perceptron_model.predict(tweet_test))))
 
-# print('SGDClassifier' + '-'*20)
-# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, SGDClassifier_model.predict(tweet_test))))
+print('LogisticRegression' + '-'*20)
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, LogisticRegression_model.predict(tweet_test))))
 
-# print('PassiveAgressiveClassifier' + '-'*20)
-# print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, PassiveAggressive_model.predict(tweet_test))))
+print('RidgeClassifier' +'-'*20)
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, RidgeClassifier_model.predict(tweet_test))))
+
+print('RidgeClassifierCV' +'-'*20)
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, RidgeClassifierCV_model.predict(tweet_test))))
+
+print('Perceptron' + '-'*20)
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, Perceptron_model.predict(tweet_test))))
+
+print('SGDClassifier' + '-'*20)
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, SGDClassifier_model.predict(tweet_test))))
+
+print('PassiveAgressiveClassifier' + '-'*20)
+print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, PassiveAggressive_model.predict(tweet_test))))
