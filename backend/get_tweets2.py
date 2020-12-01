@@ -6,6 +6,7 @@ import pandas as pd
 import string
 import time
 import multiprocessing
+import pickle
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -16,13 +17,10 @@ from sklearn.linear_model import LogisticRegression, RidgeClassifier, RidgeClass
 from sklearn.metrics import accuracy_score
 nltk.download('stopwords')
 
-# Use this line of code to load back the model
-from joblib import load
-# Model has a 95% percent accuracy
-Relevance_model = load('filename.joblib')
+# Model has a 90% percent accuracy
+Relevance_model = pickle.load(open('ridgeclassifier.sav', 'rb'))
 # Parser. This is also a pickle object
-parser = load('filename2.joblib')
-
+parser = pickle.load(open('parser.sav', 'rb'))
 
 CONSUMER_KEY = "RUwp5Jv7MLdw5GoorbhKRuBlI"
 CONSUMER_SECRET = "fsyrhyubNZfXhczDciIk048fncmA7rcHD7phP4dPrwXfWWlcI0"
@@ -52,9 +50,13 @@ def get_past_tweets(keyword):
     db = client.twitterdb
 
     for tweet in tweets:
-      print("Past Tweet")
-      tweet._json['relevance'] = Relevance_model.predict(parser.transform([tweet._json['text']]))[0]
-      db.tweets.insert_one(tweet._json)
+    #   print("Past Tweet")
+        tweet._json['relevance'] = Relevance_model.predict(parser.transform([tweet._json['text']]))[0]
+
+        
+        if tweet._json['relevance'] == 'T':
+            print(tweet._json['text'] + ": " + tweet._json['relevance'])
+            db.tweets.insert_one(tweet._json)
 
 class StreamListener(tw.StreamListener):
     # This is a class provided by tweepy to access the Twitter Streaming API.
@@ -86,8 +88,11 @@ class StreamListener(tw.StreamListener):
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
               datajson['relevance'] = Relevance_model.predict(parser.transform([datajson['text']]))[0]
-              print("Streamed Tweet")
-              db.tweets.insert_one(datajson)
+              if datajson['relevance'] == 'T':
+                print(datajson['text'] + ": " + tweet._json['relevance'])
+                db.tweets.insert_one(datajson)
+            #   print("Streamed Tweet")
+            #   db.tweets.insert_one(datajson)
         except KeyError:
           pass
 
