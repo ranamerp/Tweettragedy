@@ -72,15 +72,16 @@ class NavSearchBar extends Component {
             <div>
                 
                 <header style={{width:"100vw", height: "10vh"}}>
-                    <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>
-                        <Navbar.Brand href="#home">Disaster Master</Navbar.Brand>
+                    <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "8vh"}}>
+                        
+                        <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                         <Nav className="mr-auto">
                             <Nav.Link href="./Main.jsx">Home</Nav.Link>
                             <Nav.Link href="./About.jsx">About</Nav.Link>
                             <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
                         </Nav>
                         <Form inline >
-                            <Form.Group>
+                            <Form.Group> 
                             <DateRangePicker
                                 startDate={this.state.startDate} // momentPropTypes.momentObj or null,
                                 endDate={this.state.endDate} // momentPropTypes.momentObj or null,
@@ -91,6 +92,7 @@ class NavSearchBar extends Component {
                                 focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                                 onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired, 
                                 isOutsideRange={() => false}
+                                style={{height:"5vh", width:"10vw"}}
                                 />
 
                             <div>&nbsp;</div>
@@ -99,7 +101,7 @@ class NavSearchBar extends Component {
                                     placeholder="Enter Location" 
                                     value = {this.state.search} 
                                     onChange={this.updateSearch.bind(this)}
-                                
+                                    style={{height:"5vh", width:"10vw"}}
                                 />
                                 <div>&nbsp;</div>
                                 <Form.Control 
@@ -107,7 +109,7 @@ class NavSearchBar extends Component {
                                     placeholder="Enter Disaster" 
                                     value = {this.state.disaster} 
                                     onChange={this.updateDisaster.bind(this)}
-                                
+                                    style={{height:"5vh", width:"10vw"}}
                                 />
                                 <div>&nbsp;</div>
                             

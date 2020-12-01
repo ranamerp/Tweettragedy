@@ -5,6 +5,7 @@ import NavSearchBar from './components/NavSearchBar'
 function App() {
 
   return (
+    
     <NavSearchBar/>
   );
 }
