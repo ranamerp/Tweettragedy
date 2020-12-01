@@ -218,7 +218,7 @@ class MyMap extends Component {
             >
             
                 <GeoJSON
-                    key={JSON.stringify(this.props.startDate).concat(this.props.endDate).concat(this.props.search)}
+                    key={JSON.stringify(this.props.startDate).concat(this.props.endDate).concat(this.props.search).concat(JSON.stringify(Math.random(5000000)))}
                     style = {this.countryStyle}
                     data = {countries.features}
                     

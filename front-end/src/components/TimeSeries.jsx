@@ -12,7 +12,7 @@ class TimeSeries extends Component {
       {
         label: "Tweets",
         data: [],
-        fill: this.props.startDate === this.props.startDate,
+        fill: true,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)"
       }
@@ -167,7 +167,7 @@ class TimeSeries extends Component {
 
 
     }
-        if(Start == End){
+        if(Start === End){
             this.filtered_data[this.filtered_data.length-1].count =0
             this.filtered_data[0].count =0
         }

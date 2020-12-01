@@ -7,12 +7,11 @@ import moment from "moment"
 import Legend from "./Legend";
 import TimeSeries from "./TimeSeries"
 import tweets from "../data/tweets.json"
-import axios from "axios";
+import axios from "axios"
+
 
 
 class NavSearchBar extends Component {
-    
-
     
     constructor(props){
         super(props);
@@ -22,35 +21,40 @@ class NavSearchBar extends Component {
             disaster: "",
             search: "",
             data: tweets,
-            buttonClicked: false
+            dummy_data: []
         }
-        this.getDetails = this.getDetails.bind(this);
     }
+    
     updateSearch(event){
         this.setState({
             search: event.target.value
         })
-        
-     
-    }
 
+     //   fetch('http://localhost:5000/refresh_data')
+      //      .then(response => response.json())
+       //     .then(data => this.setState({
+        //        dummy_data:JSON.stringify(data)
+          //  }));
+
+        
+        console.log(this.state.dummy_data)
+        
+    }
     updateDisaster(event){
+
+        
+
         this.setState({
             disaster: event.target.value
         })
-        axios.post("http://localhost:5000")
 
-
-     
+        axios.post('http://localhost:5000/refresh_data', [this.state.disaster])
+            .then(function(response){
+                console.log(response.data);
+        })
+        
     }
 
-    getDetails() {
-        if (!this.state.buttonClicked) {
-          this.setState({
-            buttonClicked: true
-          });
-        }
-      }
     
     updateDate(event){
         this.setState({
@@ -66,15 +70,16 @@ class NavSearchBar extends Component {
         
         return(
             <div>
-                <header>
-                    <Navbar bg="primary" variant="dark">
-                        <Navbar.Brand href="#home">Software Engineering Project</Navbar.Brand>
+                
+                <header style={{width:"100vw", height: "10vh"}}>
+                    <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>
+                        <Navbar.Brand href="#home">Disaster Master</Navbar.Brand>
                         <Nav className="mr-auto">
                             <Nav.Link href="./Main.jsx">Home</Nav.Link>
                             <Nav.Link href="./About.jsx">About</Nav.Link>
                             <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
                         </Nav>
-                        <Form inline>
+                        <Form inline >
                             <Form.Group>
                             <DateRangePicker
                                 startDate={this.state.startDate} // momentPropTypes.momentObj or null,
@@ -114,6 +119,7 @@ class NavSearchBar extends Component {
                     
                 </header>
             <div>
+            {JSON.stringify(this.state.buttonClicked)}
                 <center>
                 <TimeSeries
                     data = {this.state.data}
