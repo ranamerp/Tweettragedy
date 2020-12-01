@@ -10,7 +10,7 @@ from sklearn import svm
 # from sklearn.linear_model import *
 from sklearn.metrics import accuracy_score
 import pickle
-# nltk.download('stopwords')
+nltk.download('stopwords')
 
 def text_preprocess(text):
     text = text.translate(str.maketrans('', '', string.punctuation))
@@ -19,6 +19,8 @@ def text_preprocess(text):
 
 #loading csv data into dataframe
 tweet_data = pd.read_csv(sys.argv[1], encoding="latin")
+#dropping rows that may have been left empty
+# tweet_data.dropna(axis=0, inplace=True)
 #shuffling data
 tweet_data = tweet_data.sample(frac=1)
 
@@ -28,7 +30,11 @@ tweet_data_copy = tweet_data_copy.apply(text_preprocess)
 
 # Collecting each word and its frequency in each tweet
 vectorizer = TfidfVectorizer("english")
+# vectorizer.transform('test')
+# print(type(vectorizer))
 tweet_mat = vectorizer.fit_transform(tweet_data_copy)
+# print(type(tweet_mat))
+pickle.dump(tweet_mat, open('parser.sav', 'wb'))
 
 # Splitting into training and testing models
 tweet_train, tweet_test, relevant_norelevant_train, relevant_norelevant_test = \
@@ -40,6 +46,7 @@ svm_model.fit(tweet_train, relevant_norelevant_train)
 
 #saving model to pickle file
 pickle.dump(svm_model, open('svm_model.sav', 'wb'))
+
 
 print('Accuracy testing: ' + str(accuracy_score(relevant_norelevant_test, svm_model.predict(tweet_test))))
 
