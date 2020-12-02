@@ -48,7 +48,7 @@ class NavSearchBar extends Component {
             disaster: event.target.value
         })
 
-        axios.post('http://localhost:5000/refresh_data', [this.state.disaster])
+        axios.post('https://twitter-disaster-master.herokuapp.com/refresh_data', [this.state.disaster])
             .then(function(response){
                 console.log(response.data);
         })
