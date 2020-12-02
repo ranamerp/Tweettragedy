@@ -1,0 +1,8 @@
+INSTRUCTIONS ON HOW TO DEPLOY TO HEROKU
+
+Open command terminal in this window
+Make changes
+do "git add ."
+then do "git commit -m <insert commit>"
+then do "git push heroku master"
+profit!
