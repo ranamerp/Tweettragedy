@@ -62,13 +62,10 @@ def get_past_tweets(keyword):
     db = client.twitterdb
     try:
         for tweet in tweets:
-        #   print("Past Tweet")
-            tweet._json['relevance'] = model_prediction(tweet._json['text'])
-
-            
-            if tweet._json['relevance'] == 'T':
-                print("Past Tweet" + tweet._json['text'] + ": " + tweet._json['relevance'])
+            if model_prediction(tweet._json['text']) == 'T':
+                tweet._json['disaster'] = keyword
                 db.tweets.insert_one(tweet._json)
+
     except tw.error.TweepError:
         print("API Issue! Shutting down the connection...")
         exit(0)
@@ -103,9 +100,10 @@ class StreamListener(tw.StreamListener):
         # Conditional check to prevent retweets or replies to be added to the database
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
-              datajson['relevance'] = model_prediction(datajson['text'][0])
-              if datajson['relevance'] == 'T':
+            if model_prediction(datajson['text']) == 'T':
+                datajson['disaster'] = keyword
                 db.tweets.insert_one(datajson)
+
         except KeyError:
           pass
 
