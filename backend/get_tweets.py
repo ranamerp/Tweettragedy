@@ -7,18 +7,12 @@ import string
 import time
 import multiprocessing
 import pickle
+import os
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
-import nltk
-from nltk.corpus import stopwords
-from sklearn.linear_model import LogisticRegression, RidgeClassifier, RidgeClassifierCV, Perceptron, SGDClassifier, \
-    PassiveAggressiveClassifier
-from sklearn.metrics import accuracy_score
-nltk.download('stopwords')
+from sklearn.linear_model import *
 
-# Model has a 90% percent accuracy
-Relevance_model = pickle.load(open('ridgeclassifier.sav', 'rb'))
 # Parser. This is also a pickle object
 parser = pickle.load(open('parser.sav', 'rb'))
 
@@ -36,11 +30,29 @@ auth2.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 # Link to database in mongodb atlas
 MONGO_HOST = 'mongodb+srv://Application:Hacker@cluster0.qpng4.mongodb.net/tweetsDB?retryWrites=true&w=majority'
 
+def model_prediction(text):
+    true = 0
+    false = 0
+    for item in os.listdir("models/"):
+        model = pickle.load(open("models/{}".format(item), 'rb'))
+        prediction = model.predict(parser.transform([text]))[0]
+        if prediction == "T":
+            true += 1
+        else:
+            false += 1
+        
+    if true > false:
+        pred = "T"
+    else:
+        pred = "F"
+    
+    return pred
+
 def get_past_tweets(keyword):
     search_words = keyword + " -filter:retweets" + " -filter:replies"
-    date_since = "2019-01-01"
+    date_since = "2020-01-01"
 
-    api = tw.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+    api = tw.API(auth, wait_on_rate_limit=False, wait_on_rate_limit_notify=True)
     tweets = tw.Cursor(api.search,
                            q=search_words,
                            lang="en",
@@ -48,15 +60,19 @@ def get_past_tweets(keyword):
 
     client = MongoClient(MONGO_HOST)
     db = client.twitterdb
+    try:
+        for tweet in tweets:
+        #   print("Past Tweet")
+            tweet._json['relevance'] = model_prediction(tweet._json['text'])
 
-    for tweet in tweets:
-    #   print("Past Tweet")
-        tweet._json['relevance'] = Relevance_model.predict(parser.transform([tweet._json['text']]))[0]
+            
+            if tweet._json['relevance'] == 'T':
+                print("Past Tweet" + tweet._json['text'] + ": " + tweet._json['relevance'])
+                db.tweets.insert_one(tweet._json)
+    except tw.error.TweepError:
+        print("API Issue! Shutting down the connection...")
+        exit(0)
 
-        
-        if tweet._json['relevance'] == 'T':
-            print(tweet._json['text'] + ": " + tweet._json['relevance'])
-            db.tweets.insert_one(tweet._json)
 
 class StreamListener(tw.StreamListener):
     # This is a class provided by tweepy to access the Twitter Streaming API.
@@ -87,29 +103,29 @@ class StreamListener(tw.StreamListener):
         # Conditional check to prevent retweets or replies to be added to the database
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
-              datajson['relevance'] = Relevance_model.predict(parser.transform([datajson['text']]))[0]
+              datajson['relevance'] = model_prediction(datajson['text'][0])
               if datajson['relevance'] == 'T':
-                print(datajson['text'] + ": " + tweet._json['relevance'])
                 db.tweets.insert_one(datajson)
-            #   print("Streamed Tweet")
-            #   db.tweets.insert_one(datajson)
         except KeyError:
           pass
 
-# Set up the listener. The 'wait_on_rate_limit=True' is needed to help with Twitter API rate limiting.
-keyword = input("Enter keyword: ")
-start_time = time.time()
-listener = StreamListener(api=tw.API(wait_on_rate_limit=True, wait_on_rate_limit_notify=True))
-streamer = tw.Stream(auth=auth2, listener=listener)
+    
 
-t1 = multiprocessing.Process(target=get_past_tweets, args=[keyword]) 
-t2 = multiprocessing.Process(target=streamer.filter(track=keyword, languages=['en'], is_async=True))
-t1.start() 
-t2.start()
+if __name__ == "__main__":
+    # Set up the listener. The 'wait_on_rate_limit=True' is needed to help with Twitter API rate limiting.
+    keyword = input("Enter keyword: ")
+    start_time = time.time()
+    listener = StreamListener(api=tw.API(wait_on_rate_limit=False, wait_on_rate_limit_notify=True))
+    streamer = tw.Stream(auth=auth2, listener=listener)
 
-t1.join()
-t2.join()
+    t1 = multiprocessing.Process(target=get_past_tweets, args=[keyword]) 
+    t2 = multiprocessing.Process(target=streamer.filter(track=keyword, languages=['en'], is_async=True))
+    t1.start() 
+    t2.start()
 
-streamer.disconnect()
-print("Done!") 
-print("--- This took %s seconds ---" % (time.time() - start_time))
+    t1.join()
+    t2.join()
+
+    streamer.disconnect()
+    print("Done!") 
+    print("--- This took %s seconds ---" % (time.time() - start_time))
