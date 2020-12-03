@@ -8,7 +8,7 @@ import Legend from "./Legend";
 import TimeSeries from "./TimeSeries"
 import tweets from "../data/tweets.json"
 import axios from "axios"
-
+import { CSVLink, CSVDownload } from "react-csv";
 
 
 class NavSearchBar extends Component {
@@ -21,40 +21,42 @@ class NavSearchBar extends Component {
             disaster: "",
             search: "",
             data: tweets,
-            dummy_data: []
+            
         }
     }
-    
+    dummy_data= []
     updateSearch(event){
         this.setState({
             search: event.target.value
         })
-
-     //   fetch('http://localhost:5000/refresh_data')
-      //      .then(response => response.json())
-       //     .then(data => this.setState({
-        //        dummy_data:JSON.stringify(data)
-          //  }));
-
-        
-        console.log(this.state.dummy_data)
         
     }
-    updateDisaster(event){
-
-        
+    async updateDisaster(event){
 
         this.setState({
             disaster: event.target.value
         })
-
-        axios.post('https://twitter-disaster-master.herokuapp.com/refresh_data', [this.state.disaster])
-            .then(function(response){
-                console.log(response.data);
+        var db = ""
+        var temp_array = []
+        await axios.post('http://localhost:5000/refresh_data', [this.state.disaster])
+            .then((response) => {
+                db = (JSON.parse(JSON.stringify(response.data)))
+                for(var objects in db){
+                    temp_array.push(db[objects])
+                }
+                this.dummy_data = temp_array
+                
         })
         
-    }
 
+        this.setState({
+            data: this.dummy_data
+        })
+        
+        console.log(this.state.data)
+        
+    }
+    
     
     updateDate(event){
         this.setState({
@@ -64,6 +66,7 @@ class NavSearchBar extends Component {
         
     }
 
+   
      
 
     render() { 
@@ -76,8 +79,8 @@ class NavSearchBar extends Component {
                         
                         <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                         <Nav className="mr-auto">
-                            <Nav.Link href="./Main.jsx">Home</Nav.Link>
-                            <Nav.Link href="./About.jsx">About</Nav.Link>
+                            <Nav.Link href="./">Home</Nav.Link>
+                            <Nav.Link href="./About">About</Nav.Link>
                             <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
                         </Nav>
                         <Form inline >
@@ -92,7 +95,7 @@ class NavSearchBar extends Component {
                                 focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                                 onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired, 
                                 isOutsideRange={() => false}
-                                style={{height:"5vh", width:"10vw"}}
+                                style={{height:"5%", width:"10vw"}}
                                 />
 
                             <div>&nbsp;</div>
@@ -120,26 +123,27 @@ class NavSearchBar extends Component {
                     </Navbar>
                     
                 </header>
-            <div>
-            {JSON.stringify(this.state.buttonClicked)}
-                <center>
-                <TimeSeries
-                    data = {this.state.data}
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
-                />
-                </center>
-                <br></br>
-                <br></br>
-                <MyMap
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
-                    search={this.state.search}
-                    data = {this.state.data}
-                /> 
-                <Legend/> 
-                
-            </div>
+                <div>
+                    <center>
+                    <TimeSeries
+                        data = {this.state.data}
+                        startDate={this.state.startDate}
+                        endDate={this.state.endDate}
+                    />
+                    </center>
+                    <br></br>
+                    <br></br>
+                    <MyMap
+                        startDate={this.state.startDate}
+                        endDate={this.state.endDate}
+                        search={this.state.search}
+                        data = {this.state.data}
+                    /> 
+                    <Legend/> 
+                    
+                    <CSVLink data={this.state.data}>Download me</CSVLink>;
+
+                </div>
             </div>
           );
     }

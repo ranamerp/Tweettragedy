@@ -175,13 +175,18 @@ class TimeSeries extends Component {
         var temp_date = []
         for(var quantity = 0; quantity < this.filtered_data.length;quantity++){
             temp_count.push(parseInt(this.filtered_data[quantity].count))
-            temp_date.push(this.filtered_data[quantity].date)
+            temp_date.push(this.date_to_date_range(this.filtered_data, quantity))
         }
         this.chart_data.labels = temp_date 
         this.chart_data.datasets[0].data = temp_count
         
     }
-
+    date_to_date_range(date, quantity){
+        if(quantity !== 0){
+            return (date[quantity-1].date.concat("-").concat(date[quantity].date))
+        }
+        return date[quantity].date.concat("-").concat(date[quantity].date)
+    }
 
     render() { 
         return ( 
