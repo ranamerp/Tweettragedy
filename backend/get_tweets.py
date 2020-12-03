@@ -40,13 +40,8 @@ def model_prediction(text):
             true += 1
         else:
             false += 1
-        
-    if true > false:
-        pred = "T"
-    else:
-        pred = "F"
     
-    return pred
+    return true > false
 
 def get_past_tweets(keyword):
     search_words = keyword + " -filter:retweets" + " -filter:replies"
@@ -100,7 +95,7 @@ class StreamListener(tw.StreamListener):
         # Conditional check to prevent retweets or replies to be added to the database
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
-            if model_prediction(datajson['text']) == 'T':
+            if model_prediction(datajson['text']):
                 datajson['disaster'] = keyword
                 db.tweets.insert_one(datajson)
 
