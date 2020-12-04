@@ -9,11 +9,10 @@ import {BrowserRouter as Router, Route, Switch, HashRouter, Redirect} from "reac
 function App() {
 
   return (
-    <HashRouter basename='/'>
     <Router>
       <Switch> 
         <Route
-          exact path="/435-twitter-disaster-master/" component={NavSearchBar}
+          exact path="/" component={NavSearchBar}
         />
         <Route
           exact path="/About" component={About}
@@ -26,7 +25,6 @@ function App() {
         />
       </Switch>
     </Router>
-    </HashRouter>
     //<NavSearchBar/>
   );
 }

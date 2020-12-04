@@ -13,7 +13,7 @@ class MyMap extends Component {
         fillColor: "white",
         fillOpacity: 1,
         color: "black",
-        weight: 0.5
+        weight: 0.8
 
     };
 
@@ -21,7 +21,7 @@ class MyMap extends Component {
         fillColor: "white",
         fillOpacity: 1,
         color: "black",
-        weight: 2
+        weight: 1
 
     };
     convertDate(date){
@@ -213,12 +213,12 @@ class MyMap extends Component {
                 center= {[40,40]}
                 minZoom={2}
                 ref={(ref) => { this.map = ref; }}
-
+                doubleClickZoom= {"".concat(JSON.stringify(this.props.data).substring(0,2))}
                
             >
             
                 <GeoJSON
-                    key={JSON.stringify(this.props.startDate).concat(this.props.endDate).concat(this.props.search).concat(JSON.stringify(Math.random(5000000)))}
+                    key={JSON.stringify(this.props.startDate).concat(JSON.stringify(this.props.data).substring(0,2)).concat(this.props.endDate).concat(this.props.search).concat(JSON.stringify(Math.random(5000000)))}
                     style = {this.countryStyle}
                     data = {countries.features}
                     
@@ -226,7 +226,7 @@ class MyMap extends Component {
                     
                 ></GeoJSON>
                 <GeoJSON
-                    key={JSON.stringify(this.props.startDate).concat(this.props.endDate).concat(this.props.search)}
+                    key={JSON.stringify(this.props.startDate).concat(this.props.endDate).concat(this.props.search).concat(JSON.stringify(this.props.data).substring(0,2))}
                     style = {this.stateStyle}
                     data = {states.features}
                     onEachFeature = {this.OnEachState}

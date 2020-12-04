@@ -6,19 +6,24 @@ import { Jumbotron, Nav, Navbar } from "react-bootstrap";
 const About = () => {
     return ( 
     <div>
-                
-        <header style={{width:"100vw", height: "10vh"}}>
-            <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "8vh"}}>  
+            
+            <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>  
+            <br></br>
                 <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="./">Home</Nav.Link>
                     <Nav.Link href="./About">About</Nav.Link>
                     <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
                 </Nav>
+                <br></br>
+                <div style={{height: "12vh"}}>
+                    <br></br>
+                </div>
+                <br></br>
+                <br></br>
                 
             </Navbar>
             
-        </header>
         <div>
             <br></br>
             <br></br>

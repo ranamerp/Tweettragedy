@@ -1,14 +1,16 @@
-import React, { Component } from "react";
-import { Form, Nav, Navbar } from "react-bootstrap";
+import React, { Component, Suspense} from "react";
+import { Form, Nav, Navbar, Button } from "react-bootstrap";
 import { DateRangePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
-import MyMap from "./MyMap";
+import "./customDatePickerWidth.css";
 import moment from "moment"
 import Legend from "./Legend";
-import TimeSeries from "./TimeSeries"
+import Loading from "./Loading"
 import tweets from "../data/tweets.json"
 import axios from "axios"
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
+const MyMap = React.lazy(() => import('./MyMap'));
+const TimeSeries = React.lazy(() => import('./TimeSeries'));
 
 
 class NavSearchBar extends Component {
@@ -21,25 +23,35 @@ class NavSearchBar extends Component {
             disaster: "",
             search: "",
             data: tweets,
+            startDate_temp: moment().startOf("week"),
+            endDate_temp: moment().startOf("week"),
+            disaster_temp: "",
+            search_temp: "",
             
         }
     }
     dummy_data= []
     updateSearch(event){
         this.setState({
-            search: event.target.value
+            search: event
         })
         
     }
+    updateSearch_temp(event){
+        this.setState({
+            search_temp: event.target.value
+        })
+        
+    }
+    
     async updateDisaster(event){
 
         this.setState({
-            disaster: event.target.value
+            disaster: event
         })
         var db = ""
         var temp_array = []
-        //change to https://twitter-disaster-master.herokuapp.com/
-        await axios.post('http://localhost:5000/refresh_data', [this.state.disaster])
+        await axios.post('https://twitter-disaster-master.herokuapp.com/refresh_data', [this.state.disaster, ])
             .then((response) => {
                 db = (JSON.parse(JSON.stringify(response.data)))
                 for(var objects in db){
@@ -54,7 +66,15 @@ class NavSearchBar extends Component {
             data: this.dummy_data
         })
         
-        console.log(this.state.data)
+        
+    }
+
+    async updateDisaster_temp(event){
+
+        this.setState({
+            disaster_temp: event.target.value
+        })
+        
         
     }
     
@@ -67,64 +87,99 @@ class NavSearchBar extends Component {
         
     }
 
-   
+    updateDate_temp(event){
+        this.setState({
+            startDate_temp:event[0],
+            endDate_temp:event[1]
+        })
+        
+    }
+
+    submit_Button(event){
+        var e_t =this.state.startDate
+        var s_t = this.state.endDate
+        this.updateDate_temp([s_t,e_t])
+        this.updateSearch(this.state.search_temp)
+        this.updateDisaster(this.state.disaster_temp)
+        
+    }
+    headers = [
+        { label: 'created_at', key: 'created_at' },
+        { label: 'user.location', key: 'user.location' },
+      ];
      
 
     render() { 
         
         return(
             <div>
-                
-                <header style={{width:"100vw", height: "10vh"}}>
-                    <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "8vh"}}>
-                        
-                        <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
-                        <Nav className="mr-auto">
-                            <Nav.Link href=".">Home</Nav.Link>
-                            <Nav.Link href="./About">About</Nav.Link>
-                            <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
-                        </Nav>
-                        <Form inline >
-                            <Form.Group> 
-                            <DateRangePicker
-                                startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                                endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                                startDateId="5"
-                                endDateId="5"
-                                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-                                updateDate={this.updateDate.bind(this)}
-                                focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                                onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired, 
-                                isOutsideRange={() => false}
-                                style={{height:"5%", width:"10vw"}}
-                                />
+                <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>
+                    <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
+                    <Nav className="mr-auto">
+                        <Nav.Link href="./">Home</Nav.Link>
+                        <Nav.Link href="./About">About</Nav.Link>
+                        <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
+                    </Nav>
+                    <Form inline >
+                        <Form.Group> 
 
+                        <DateRangePicker
+                            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                            startDateId="5"
+                            endDateId="5"
+                            onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                            updateDate={this.updateDate.bind(this)}
+                            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired, 
+                            isOutsideRange={() => false}
+                            block="true"
+                            style={{height:"3vh", width:"10vw"}}
+                            
+                            />
+                        <div>&nbsp;</div>
+                            <Form.Control 
+                                type="text" 
+                                placeholder="Enter Location" 
+                                value = {this.state.search_temp} 
+                                onChange={this.updateSearch_temp.bind(this)}
+                                style={{height:"5vh", width:"10vw"}}
+                            />
                             <div>&nbsp;</div>
-                                <Form.Control 
-                                    type="text" 
-                                    placeholder="Enter Location" 
-                                    value = {this.state.search} 
-                                    onChange={this.updateSearch.bind(this)}
-                                    style={{height:"5vh", width:"10vw"}}
-                                />
-                                <div>&nbsp;</div>
-                                <Form.Control 
-                                    type="text" 
-                                    placeholder="Enter Disaster" 
-                                    value = {this.state.disaster} 
-                                    onChange={this.updateDisaster.bind(this)}
-                                    style={{height:"5vh", width:"10vw"}}
-                                />
-                                <div>&nbsp;</div>
-                            
+                            <Form.Control 
+                                type="text" 
+                                placeholder="Enter Disaster" 
+                                value = {this.state.disaster_temp} 
+                                onChange={this.updateDisaster_temp.bind(this)}
+                                style={{height:"5vh", width:"10vw"}}
+                            />
+                            <div>&nbsp;</div>
+                            <Button
+                                variant="warning"
+                                onClick={this.submit_Button.bind(this)}
+                                style={{height:"6vh", width:"10vw", fontWeight:"bold", }}
+                            >Submit</Button>
+                            &nbsp;
 
-                            </Form.Group>
-                            
-                        </Form>
-                    </Navbar>
-                    
-                </header>
+                            <CSVLink className="mr-auto" data={this.state.data} headers={this.headers} >
+
+                            <Button
+                                variant="success"
+                                onClick={this.submit_Button.bind(this)}
+                                style={{height:"6vh", width:"8vw", fontWeight:"bold", }}
+                            >Download</Button>
+                            </CSVLink>
+                            &nbsp;
+                            &nbsp;
+
+
+                        </Form.Group>
+                        
+                    </Form>
+                </Navbar>
+                
                 <div>
+                <Suspense fallback={Loading} >
                     <center>
                     <TimeSeries
                         data = {this.state.data}
@@ -137,13 +192,12 @@ class NavSearchBar extends Component {
                     <MyMap
                         startDate={this.state.startDate}
                         endDate={this.state.endDate}
-                        search={this.state.search}
+                        search={this.state.search_temp}
                         data = {this.state.data}
                     /> 
                     <Legend/> 
                     
-                    <CSVLink data={this.state.data}>Download me</CSVLink>;
-
+                    </Suspense>
                 </div>
             </div>
           );

@@ -8,7 +8,7 @@ const Sourcing = () => {
     <div>
                 
         <header style={{width:"100vw", height: "10vh"}}>
-            <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "8vh"}}>  
+            <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>  
                 <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="./">Home</Nav.Link>
@@ -23,7 +23,7 @@ const Sourcing = () => {
             <br></br>
             <br></br>
             <center>
-                <Jumbotron style={{width:"60vw",height:"60vh" , textAlign:"left", fontSize:"3vh"}}>
+                <Jumbotron style={{width:"60vw",height:"80vh" , textAlign:"left", fontSize:"3vh"}}>
                     Thanks to all the creators of the resources we used
                     <br></br>
                     Following Resources we used
@@ -44,6 +44,13 @@ const Sourcing = () => {
                     <br></br>
                     Chart2-React-JS
                     <br></br>
+                    Pandas
+                    <br></br>
+                    Scikit-Learn
+                    <br></br>
+                    Tweepy
+                    <br></br>
+                    Pymongo
                     
                 </Jumbotron>
             </center>
