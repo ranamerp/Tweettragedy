@@ -38,6 +38,7 @@ class NavSearchBar extends Component {
         })
         var db = ""
         var temp_array = []
+        //change to https://twitter-disaster-master.herokuapp.com/
         await axios.post('http://localhost:5000/refresh_data', [this.state.disaster])
             .then((response) => {
                 db = (JSON.parse(JSON.stringify(response.data)))
@@ -79,7 +80,7 @@ class NavSearchBar extends Component {
                         
                         <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                         <Nav className="mr-auto">
-                            <Nav.Link href="./">Home</Nav.Link>
+                            <Nav.Link href=".">Home</Nav.Link>
                             <Nav.Link href="./About">About</Nav.Link>
                             <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
                         </Nav>

@@ -30,6 +30,9 @@ def refresh_data():
     for datas in our_mongo_database_compressed: 
         array_of_json_objects.append(datas)
 
+    print("This is our array:", array_of_json_objects)
     our_json_string = json.dumps(array_of_json_objects) #this turns the array of json objects into a json string which can be transfered between db and website
     
     return our_json_string
+
+app.run()

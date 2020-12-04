@@ -29,6 +29,8 @@ auth2.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 # Link to database in mongodb atlas
 MONGO_HOST = 'mongodb+srv://Application:Hacker@cluster0.qpng4.mongodb.net/tweetsDB?retryWrites=true&w=majority'
+client = MongoClient(MONGO_HOST)
+db = client.twitterdb
 
 def model_prediction(text):
     true = 0
@@ -43,21 +45,30 @@ def model_prediction(text):
     
     return true > false
 
+def get_filtered_tweets(disaster):
+    item_list = []
+    for item in db.tweets.find({"disaster": disaster}):
+        item_list.append(item)
+    
+    filtered_list = json.dumps(item_list)
+    return filtered_list
+
 def get_past_tweets(keyword):
     search_words = keyword + " -filter:retweets" + " -filter:replies"
-    date_since = "2020-01-01"
+    date_since = "2019-01-01"
+    #until = "2020-11-01"
 
     api = tw.API(auth, wait_on_rate_limit=False, wait_on_rate_limit_notify=True)
+    
     tweets = tw.Cursor(api.search,
                            q=search_words,
                            lang="en",
                            since=date_since).items(1000)
 
-    client = MongoClient(MONGO_HOST)
-    db = client.twitterdb
+    #see if we can get 1000 every month
     try:
         for tweet in tweets:
-            if model_prediction(tweet._json['text']) == 'T':
+            if model_prediction(tweet._json['text']):
                 tweet._json['disaster'] = keyword
                 db.tweets.insert_one(tweet._json)
 
@@ -82,10 +93,10 @@ class StreamListener(tw.StreamListener):
     def on_data(self, data):
         # This is the meat of the script...it connects to your mongoDB and stores the tweet
 
-        client = MongoClient(MONGO_HOST)
+        #client = MongoClient(MONGO_HOST)
 
         # Use twitterdb database. If it doesn't exist, it will be created.
-        db = client.twitterdb
+        #db = client.twitterdb
 
         # Decode the JSON from Twitter
         datajson = json.loads(data)
