@@ -39,6 +39,7 @@ auth2.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 client = pymongo.MongoClient("mongodb+srv://Application:Hacker@cluster0.qpng4.mongodb.net/tweetsDB?retryWrites=true&w=majority")
 db = client["twitterdb"]
 col = db["tweets"] 
+keyword = ""
 
 @app.route("/", methods=['GET'])
 def index():
@@ -46,20 +47,20 @@ def index():
     return "<h1>Welcome to our server !!</h1>"
 
 def request_tweets(disaster):
-    print(disaster)
+    global keyword
+    if keyword != disaster[0]:
+        get_tweets(disaster[0])
 
 @app.route('/refresh_data', methods=['GET', 'POST'])
 def refresh_data():
     disaster = request.get_json()
     request_tweets(disaster)
-    x = 0
     array_of_json_objects = []
-    our_mongo_database_compressed = col.find({},{'created_at':1, 'user.location':1,'_id':0}) 
+    our_mongo_database_compressed = col.find({},{'created_at':1, 'user.location':1,'_id':0, "disaster": disaster}) 
 
     for datas in our_mongo_database_compressed: 
         array_of_json_objects.append(datas)
 
-    print("This is our array:", array_of_json_objects)
     our_json_string = json.dumps(array_of_json_objects) #this turns the array of json objects into a json string which can be transfered between db and website
     
     return our_json_string
@@ -78,14 +79,6 @@ def model_prediction(text):
     
     return true > false
 
-#this one might need a route
-def get_filtered_tweets(disaster):
-    item_list = []
-    for item in db.tweets.find({"disaster": disaster}):
-        item_list.append(item)
-    
-    filtered_list = json.dumps(item_list)
-    return filtered_list
 
 def get_past_tweets(keyword):
     search_words = keyword + " -filter:retweets" + " -filter:replies"
@@ -104,10 +97,11 @@ def get_past_tweets(keyword):
         for tweet in tweets:
             if model_prediction(tweet._json['text']):
                 tweet._json['disaster'] = keyword
-                db.tweets.insert_one(tweet._json)
+                col.insert_one(tweet._json)
 
-    except tw.error.TweepError:
+    except tw.error.TweepError as e:
         print("API Issue! Shutting down the connection...")
+        print(e)
         exit(0)
 
 
@@ -142,12 +136,14 @@ class StreamListener(tw.StreamListener):
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
             if model_prediction(datajson['text']):
                 datajson['disaster'] = keyword
-                db.tweets.insert_one(datajson)
+                col.insert_one(datajson)
 
         except KeyError:
           pass
 
-def get_tweets(keyword):
+def get_tweets(disaster):
+    global keyword
+    keyword=disaster
     start_time = time.time()
     listener = StreamListener(api=tw.API(wait_on_rate_limit=False, wait_on_rate_limit_notify=True))
     streamer = tw.Stream(auth=auth2, listener=listener)
@@ -162,6 +158,7 @@ def get_tweets(keyword):
 
     streamer.disconnect()
     print("Done!") 
-    print("--- This took %s seconds ---" % (time.time() - start_time))    
+    print("--- This took %s seconds ---" % (time.time() - start_time)) 
 
-app.run()
+if __name__ == "__main__":   
+    app.run()
