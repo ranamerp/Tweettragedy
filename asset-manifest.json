@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c46947f.chunk.css",
-    "main.js": "/static/js/main.aeea3a37.chunk.js",
-    "main.js.map": "/static/js/main.aeea3a37.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f27e60b2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f27e60b2.js.map",
-    "static/css/2.bfa946a4.chunk.css": "/static/css/2.bfa946a4.chunk.css",
-    "static/js/2.1639116b.chunk.js": "/static/js/2.1639116b.chunk.js",
-    "static/js/2.1639116b.chunk.js.map": "/static/js/2.1639116b.chunk.js.map",
-    "static/js/3.e6815cec.chunk.js": "/static/js/3.e6815cec.chunk.js",
-    "static/js/3.e6815cec.chunk.js.map": "/static/js/3.e6815cec.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.bfa946a4.chunk.css.map": "/static/css/2.bfa946a4.chunk.css.map",
-    "static/css/main.8c46947f.chunk.css.map": "/static/css/main.8c46947f.chunk.css.map",
-    "static/js/2.1639116b.chunk.js.LICENSE.txt": "/static/js/2.1639116b.chunk.js.LICENSE.txt",
-    "static/media/legside.b5f1d509.jpg": "/static/media/legside.b5f1d509.jpg",
-    "static/media/MyMap.css": "/static/media/watr.2c40138b.jpg"
+    "main.css": "./static/css/main.3b6ddfa3.chunk.css",
+    "main.js": "./static/js/main.aeea3a37.chunk.js",
+    "main.js.map": "./static/js/main.aeea3a37.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.9efdec16.js",
+    "runtime-main.js.map": "./static/js/runtime-main.9efdec16.js.map",
+    "static/css/2.bfa946a4.chunk.css": "./static/css/2.bfa946a4.chunk.css",
+    "static/js/2.4fee00a8.chunk.js": "./static/js/2.4fee00a8.chunk.js",
+    "static/js/2.4fee00a8.chunk.js.map": "./static/js/2.4fee00a8.chunk.js.map",
+    "static/js/3.e6815cec.chunk.js": "./static/js/3.e6815cec.chunk.js",
+    "static/js/3.e6815cec.chunk.js.map": "./static/js/3.e6815cec.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.bfa946a4.chunk.css.map": "./static/css/2.bfa946a4.chunk.css.map",
+    "static/css/main.3b6ddfa3.chunk.css.map": "./static/css/main.3b6ddfa3.chunk.css.map",
+    "static/js/2.4fee00a8.chunk.js.LICENSE.txt": "./static/js/2.4fee00a8.chunk.js.LICENSE.txt",
+    "static/media/legside.b5f1d509.jpg": "./static/media/legside.b5f1d509.jpg",
+    "static/media/MyMap.css": "./static/media/watr.2c40138b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f27e60b2.js",
+    "static/js/runtime-main.9efdec16.js",
     "static/css/2.bfa946a4.chunk.css",
-    "static/js/2.1639116b.chunk.js",
-    "static/css/main.8c46947f.chunk.css",
+    "static/js/2.4fee00a8.chunk.js",
+    "static/css/main.3b6ddfa3.chunk.css",
     "static/js/main.aeea3a37.chunk.js"
   ]
 }
