@@ -41,7 +41,7 @@ db = client["twitterdb"]
 col = db["tweets"] 
 keyword = ""
 
-@app.route("/", methods=['GET'])
+@app.route("/#/", methods=['GET'])
 def index():
     print("testing if this shows up in console")
     return "<h1>Welcome to our server !!</h1>"
