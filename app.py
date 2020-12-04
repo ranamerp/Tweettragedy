@@ -56,7 +56,8 @@ def refresh_data():
     disaster = request.get_json()
     request_tweets(disaster)
     array_of_json_objects = []
-    our_mongo_database_compressed = col.find({'user.location': {'$ne': None}, "disaster": disaster}) 
+    our_mongo_database_compressed = col.find({},{'created_at':1, 'user.location':1,'_id':0, "disaster": disaster}) 
+    #our_mongo_database_compressed = col.find({},{'user.location': {'$ne': None}, "disaster": disaster}) 
 
     for datas in our_mongo_database_compressed: 
         array_of_json_objects.append(datas)
