@@ -96,6 +96,7 @@ def get_past_tweets(keyword):
     try:
         for tweet in tweets:
             if model_prediction(tweet._json['text']):
+                print(tweet._json['text'])
                 tweet._json['disaster'] = keyword
                 col.insert_one(tweet._json)
 
@@ -135,6 +136,7 @@ class StreamListener(tw.StreamListener):
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
             if model_prediction(datajson['text']):
+                print(datajson['text'])
                 datajson['disaster'] = keyword
                 col.insert_one(datajson)
 
