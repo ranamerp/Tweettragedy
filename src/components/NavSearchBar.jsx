@@ -8,6 +8,7 @@ import Legend from "./Legend";
 import Loading from "./Loading"
 import tweets from "../data/tweets.json"
 import axios from "axios"
+import { Link } from "react-router-dom";
 import { CSVLink } from "react-csv";
 const MyMap = React.lazy(() => import('./MyMap'));
 const TimeSeries = React.lazy(() => import('./TimeSeries'));
@@ -27,10 +28,11 @@ class NavSearchBar extends Component {
             endDate_temp: moment().startOf("week"),
             disaster_temp: "",
             search_temp: "",
-            
+            ready_state: "start"
         }
     }
     dummy_data= []
+    loader = "loading"
     updateSearch(event){
         this.setState({
             search: event
@@ -51,19 +53,21 @@ class NavSearchBar extends Component {
         })
         var db = ""
         var temp_array = []
-        await axios.post('https://twitter-disaster-master.herokuapp.com/refresh_data', [this.state.disaster, ])
+        this.loader = "loading"
+        
+        await axios.post('https://twitter-disaster-master.herokuapp.com/refresh_data', [this.state.disaster,this.state.startDate, this.state.endDate])
             .then((response) => {
                 db = (JSON.parse(JSON.stringify(response.data)))
                 for(var objects in db){
                     temp_array.push(db[objects])
                 }
                 this.dummy_data = temp_array
-                
+                this.loader = "done"
         })
-        
 
         this.setState({
-            data: this.dummy_data
+            data: this.dummy_data,
+            ready_state: this.loader
         })
         
         
@@ -101,24 +105,64 @@ class NavSearchBar extends Component {
         this.updateDate_temp([s_t,e_t])
         this.updateSearch(this.state.search_temp)
         this.updateDisaster(this.state.disaster_temp)
+        this.setState({
+            ready_state: "loading"
+        })
         
     }
     headers = [
         { label: 'created_at', key: 'created_at' },
         { label: 'user.location', key: 'user.location' },
       ];
+
+    load() {
+        if(this.state.ready_state === "start"){
+            return(<div></div>)
+        }
+        if(this.state.ready_state === "loading"){
+            return(<div>
+                <Loading/>
+            </div>)
+        }
+        if(this.state.ready_state === "done"){
+            return ( 
+                <div>
+                    <Suspense fallback={Loading} >
+                        <center>
+                        <TimeSeries
+                            data = {this.state.data}
+                            startDate={this.state.startDate}
+                            endDate={this.state.endDate}
+                        />
+                        </center>
+                        <br></br>
+                        <br></br>
+                        <MyMap
+                            startDate={this.state.startDate}
+                            endDate={this.state.endDate}
+                            search={this.state.search_temp}
+                            data = {this.state.data}
+                        /> 
+                        <Legend/> 
+                        
+                    </Suspense>
+                </div> 
+                );
+    }
+}
      
 
     render() { 
         
         return(
             <div>
+                
                 <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>
                     <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="./">Home</Nav.Link>
-                        <Nav.Link href="./About">About</Nav.Link>
-                        <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
+                        <Nav.Link as={Link} to="./#">Home</Nav.Link>
+                        <Nav.Link as={Link} to="./About">About</Nav.Link>
+                        <Nav.Link as={Link} to="./Sourcing">Sourcing</Nav.Link>
                     </Nav>
                     <Form inline >
                         <Form.Group> 
@@ -177,28 +221,9 @@ class NavSearchBar extends Component {
                         
                     </Form>
                 </Navbar>
-                
-                <div>
-                <Suspense fallback={Loading} >
-                    <center>
-                    <TimeSeries
-                        data = {this.state.data}
-                        startDate={this.state.startDate}
-                        endDate={this.state.endDate}
-                    />
-                    </center>
-                    <br></br>
-                    <br></br>
-                    <MyMap
-                        startDate={this.state.startDate}
-                        endDate={this.state.endDate}
-                        search={this.state.search_temp}
-                        data = {this.state.data}
-                    /> 
-                    <Legend/> 
-                    
-                    </Suspense>
-                </div>
+                {this.load()}
+                {this.ready_state}
+
             </div>
           );
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Jumbotron, Nav, Navbar } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 
 
 const Sourcing = () => {
@@ -11,9 +11,9 @@ const Sourcing = () => {
             <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>  
                 <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweetragety </Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="./">Home</Nav.Link>
-                    <Nav.Link href="./About">About</Nav.Link>
-                    <Nav.Link href="./Sourcing">Sourcing</Nav.Link>
+                        <Nav.Link as={Link} to="./#">Home</Nav.Link>
+                        <Nav.Link as={Link} to="./#/About">About</Nav.Link>
+                        <Nav.Link as={Link} to="./#/Sourcing">Sourcing</Nav.Link>
                 </Nav>
                 
             </Navbar>
