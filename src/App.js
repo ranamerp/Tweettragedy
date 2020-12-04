@@ -4,7 +4,7 @@ import About from './components/About'
 import Sourcing from './components/Sourcing'
 import not_found from './components/not_found'
 //import NavSearchBar from './components/NavSearchBar'
-import {BrowserRouter as Router, Route, Switch, HashRouter, Redirect} from "react-router-dom"
+import {HashRouter as Router, Route, Switch} from "react-router-dom"
 
 function App() {
 
@@ -12,13 +12,16 @@ function App() {
     <Router>
       <Switch> 
         <Route
+          exact path="/435-twitter-disaster-master/" component={NavSearchBar}
+        />
+        <Route
           exact path="/" component={NavSearchBar}
         />
         <Route
-          exact path="/About" component={About}
+        path="/About" component={About}
         />
         <Route
-          exact path="/Sourcing" component={Sourcing}
+        path="/Sourcing" component={Sourcing}
         />
         <Route
         component={not_found}
