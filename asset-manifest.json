@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/435-twitter-disaster-master/static/css/main.11558da2.chunk.css",
-    "main.js": "/435-twitter-disaster-master/static/js/main.86c9240d.chunk.js",
-    "main.js.map": "/435-twitter-disaster-master/static/js/main.86c9240d.chunk.js.map",
+    "main.js": "/435-twitter-disaster-master/static/js/main.8d317ed7.chunk.js",
+    "main.js.map": "/435-twitter-disaster-master/static/js/main.8d317ed7.chunk.js.map",
     "runtime-main.js": "/435-twitter-disaster-master/static/js/runtime-main.7515aa89.js",
     "runtime-main.js.map": "/435-twitter-disaster-master/static/js/runtime-main.7515aa89.js.map",
     "static/css/2.adfa4a80.chunk.css": "/435-twitter-disaster-master/static/css/2.adfa4a80.chunk.css",
-    "static/js/2.04a4d231.chunk.js": "/435-twitter-disaster-master/static/js/2.04a4d231.chunk.js",
-    "static/js/2.04a4d231.chunk.js.map": "/435-twitter-disaster-master/static/js/2.04a4d231.chunk.js.map",
+    "static/js/2.e871b192.chunk.js": "/435-twitter-disaster-master/static/js/2.e871b192.chunk.js",
+    "static/js/2.e871b192.chunk.js.map": "/435-twitter-disaster-master/static/js/2.e871b192.chunk.js.map",
     "static/js/3.351f9876.chunk.js": "/435-twitter-disaster-master/static/js/3.351f9876.chunk.js",
     "static/js/3.351f9876.chunk.js.map": "/435-twitter-disaster-master/static/js/3.351f9876.chunk.js.map",
     "static/css/4.b4ebbe46.chunk.css": "/435-twitter-disaster-master/static/css/4.b4ebbe46.chunk.css",
@@ -25,7 +25,7 @@
     "static/css/4.b4ebbe46.chunk.css.map": "/435-twitter-disaster-master/static/css/4.b4ebbe46.chunk.css.map",
     "static/css/5.720b3289.chunk.css.map": "/435-twitter-disaster-master/static/css/5.720b3289.chunk.css.map",
     "static/css/main.11558da2.chunk.css.map": "/435-twitter-disaster-master/static/css/main.11558da2.chunk.css.map",
-    "static/js/2.04a4d231.chunk.js.LICENSE.txt": "/435-twitter-disaster-master/static/js/2.04a4d231.chunk.js.LICENSE.txt",
+    "static/js/2.e871b192.chunk.js.LICENSE.txt": "/435-twitter-disaster-master/static/js/2.e871b192.chunk.js.LICENSE.txt",
     "static/js/3.351f9876.chunk.js.LICENSE.txt": "/435-twitter-disaster-master/static/js/3.351f9876.chunk.js.LICENSE.txt",
     "static/js/4.263a5f0c.chunk.js.LICENSE.txt": "/435-twitter-disaster-master/static/js/4.263a5f0c.chunk.js.LICENSE.txt",
     "static/media/legside.b5f1d509.jpg": "/435-twitter-disaster-master/static/media/legside.b5f1d509.jpg",
@@ -34,8 +34,8 @@
   "entrypoints": [
     "static/js/runtime-main.7515aa89.js",
     "static/css/2.adfa4a80.chunk.css",
-    "static/js/2.04a4d231.chunk.js",
+    "static/js/2.e871b192.chunk.js",
     "static/css/main.11558da2.chunk.css",
-    "static/js/main.86c9240d.chunk.js"
+    "static/js/main.8d317ed7.chunk.js"
   ]
 }
