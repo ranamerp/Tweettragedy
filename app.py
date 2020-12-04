@@ -163,5 +163,3 @@ def get_tweets(keyword):
     streamer.disconnect()
     print("Done!") 
     print("--- This took %s seconds ---" % (time.time() - start_time))    
-
-app.run()
