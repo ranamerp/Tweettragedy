@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/MyMap.css"],"names":[],"mappings":"AAAA,mBACE,WAAY,CACZ,kEACF","file":"5.0e510e3c.chunk.css","sourcesContent":[".leaflet-container {\r\n  margin: auto;\r\n  background-image: url(\"./../images/watr.jpg\");\r\n}\r\n"]}
