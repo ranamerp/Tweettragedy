@@ -11,7 +11,7 @@ const About = () => {
             <br></br>
                 <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweettragedy </Navbar.Brand>
                 <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="./">Home</Nav.Link>
+                        <Nav.Link as={Link} to="./#">Home</Nav.Link>
                         <Nav.Link as={Link} to="./About">About</Nav.Link>
                         <Nav.Link as={Link} to="./Sourcing">Sourcing</Nav.Link>
                 </Nav>
