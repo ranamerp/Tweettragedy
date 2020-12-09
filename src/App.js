@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Switch> 
         <Route
-          exact path="/Tweettragedy/" component={NavSearchBar}
+          exact path="/" component={NavSearchBar}
         />
         <Route
           exact path="/About" component={About}

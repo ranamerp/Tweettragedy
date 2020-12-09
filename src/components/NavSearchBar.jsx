@@ -54,8 +54,8 @@ class NavSearchBar extends Component {
         var db = ""
         var temp_array = []
         this.loader = "loading"
-        
-        await axios.post('https://twitter-disaster-master.herokuapp.com/refresh_data', [this.state.disaster,this.state.startDate, this.state.endDate])
+        //change this url to whatever ip your Flask Server is running on
+        await axios.post('https://localhost:5000/refresh_data', [this.state.disaster,this.state.startDate, this.state.endDate])
             .then((response) => {
                 db = (JSON.parse(JSON.stringify(response.data)))
                 for(var objects in db){
