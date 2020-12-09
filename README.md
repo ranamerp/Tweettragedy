@@ -14,5 +14,12 @@ To install the dependecies required for the back-end, you can do `pip install -r
 To install the dependencies required for the front-end, you can do `npm install` within the root folder.
 
 ## Installation
-
 To install this project, you can either clone it using `git clone` or by downloading the zip file. 
+
+## Running
+To run this program, you can do `npm start` within the root folder. This will start the front end.
+
+To run the back-end, you can do `python app.py`. 
+
+In order for full functionality, both programs must be running simultaneously. 
+
