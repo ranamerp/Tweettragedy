@@ -4,12 +4,11 @@ import About from './components/About'
 import Sourcing from './components/Sourcing'
 import not_found from './components/not_found'
 //import NavSearchBar from './components/NavSearchBar'
-import {BrowserRouter as Router, Route, Switch, HashRouter, Redirect} from "react-router-dom"
+import {HashRouter as Router, Route, Switch, Redirect} from "react-router-dom"
 
 function App() {
 
   return (
-    <HashRouter basename='/'>
     <Router>
       <Switch> 
         <Route
@@ -26,7 +25,6 @@ function App() {
         />
       </Switch>
     </Router>
-    </HashRouter>
     //<NavSearchBar/>
   );
 }

@@ -11,9 +11,9 @@ const About = () => {
             <br></br>
                 <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweettragedy </Navbar.Brand>
                 <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="./#">Home</Nav.Link>
-                        <Nav.Link as={Link} to="./About">About</Nav.Link>
-                        <Nav.Link as={Link} to="./Sourcing">Sourcing</Nav.Link>
+                        <Nav.Link as={Link} to="/#">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/About">About</Nav.Link>
+                        <Nav.Link as={Link} to="/Sourcing">Sourcing</Nav.Link>
                 </Nav>
                 <br></br>
                 <div style={{height: "12vh"}}>
@@ -25,10 +25,9 @@ const About = () => {
             </Navbar>
             
         <div>
-            <br></br>
-            <br></br>
+        <br></br><br></br><br></br>
             <center>
-                <Jumbotron style={{width:"60vw",height:"60vh" , textAlign:"left", fontSize:"3vh"}}>
+                <Jumbotron style={{width:"60vw",height:"70vh" , textAlign:"left", fontSize:"3vh"}}>
                     Dedicated to first responders and humanitarians 
                     <br></br>
                     <br></br>
@@ -38,7 +37,8 @@ const About = () => {
                     <br></br>
                     <br></br>
                     Brought to you by Simon M., Prem R., Claire F., Matt C., Aron M. and most importantly Southern Illinois University.
-
+                    <br></br><br></br>
+            
                 </Jumbotron>
             </center>
         </div>
