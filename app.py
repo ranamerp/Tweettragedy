@@ -6,6 +6,7 @@ from flask_cors import CORS, cross_origin
 import pymongo
 import tweepy as tw
 import pickle
+from bson import json_util
 
 #Machine Learning Imports
 import pandas as pd
@@ -56,13 +57,12 @@ def refresh_data():
     disaster = request.get_json()
     request_tweets(disaster)
     array_of_json_objects = []
-    our_mongo_database_compressed = col.find({},{'created_at':1, 'user.location':1,'_id':0, "disaster": disaster}) 
-    #our_mongo_database_compressed = col.find({},{'user.location': {'$ne': None}, "disaster": disaster}) 
+    our_mongo_database_compressed = col.find({'user.location' : {"$ne": None}, 'disaster': disaster[0]})
 
-    for datas in our_mongo_database_compressed: 
+    for datas in our_mongo_database_compressed:
         array_of_json_objects.append(datas)
 
-    our_json_string = json.dumps(array_of_json_objects) #this turns the array of json objects into a json string which can be transfered between db and website
+    our_json_string = json_util.dumps(array_of_json_objects) #this turns the array of json objects into a json string which can be transfered between db and website
     
     return our_json_string
 
@@ -97,7 +97,6 @@ def get_past_tweets(keyword):
     try:
         for tweet in tweets:
             if model_prediction(tweet._json['text']):
-                print(tweet._json['text'])
                 tweet._json['disaster'] = keyword
                 col.insert_one(tweet._json)
 
@@ -137,7 +136,6 @@ class StreamListener(tw.StreamListener):
         try:
           if (datajson['text'].find('RT ') == -1 and datajson['text'][0] != '@'):
             if model_prediction(datajson['text']):
-                print(datajson['text'])
                 datajson['disaster'] = keyword
                 col.insert_one(datajson)
 
