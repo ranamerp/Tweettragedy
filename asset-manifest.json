@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/Tweettragedy/static/css/main.11558da2.chunk.css",
-    "main.js": "/Tweettragedy/static/js/main.82a2996e.chunk.js",
-    "main.js.map": "/Tweettragedy/static/js/main.82a2996e.chunk.js.map",
-    "runtime-main.js": "/Tweettragedy/static/js/runtime-main.507ef41c.js",
-    "runtime-main.js.map": "/Tweettragedy/static/js/runtime-main.507ef41c.js.map",
+    "main.js": "/Tweettragedy/static/js/main.aa9a3911.chunk.js",
+    "main.js.map": "/Tweettragedy/static/js/main.aa9a3911.chunk.js.map",
+    "runtime-main.js": "/Tweettragedy/static/js/runtime-main.43ae296f.js",
+    "runtime-main.js.map": "/Tweettragedy/static/js/runtime-main.43ae296f.js.map",
     "static/css/2.adfa4a80.chunk.css": "/Tweettragedy/static/css/2.adfa4a80.chunk.css",
     "static/js/2.e871b192.chunk.js": "/Tweettragedy/static/js/2.e871b192.chunk.js",
     "static/js/2.e871b192.chunk.js.map": "/Tweettragedy/static/js/2.e871b192.chunk.js.map",
@@ -14,10 +14,10 @@
     "static/js/4.263a5f0c.chunk.js": "/Tweettragedy/static/js/4.263a5f0c.chunk.js",
     "static/js/4.263a5f0c.chunk.js.map": "/Tweettragedy/static/js/4.263a5f0c.chunk.js.map",
     "static/css/5.0e510e3c.chunk.css": "/Tweettragedy/static/css/5.0e510e3c.chunk.css",
-    "static/js/5.778f8c47.chunk.js": "/Tweettragedy/static/js/5.778f8c47.chunk.js",
-    "static/js/5.778f8c47.chunk.js.map": "/Tweettragedy/static/js/5.778f8c47.chunk.js.map",
-    "static/js/6.b0e77c41.chunk.js": "/Tweettragedy/static/js/6.b0e77c41.chunk.js",
-    "static/js/6.b0e77c41.chunk.js.map": "/Tweettragedy/static/js/6.b0e77c41.chunk.js.map",
+    "static/js/5.da3bb863.chunk.js": "/Tweettragedy/static/js/5.da3bb863.chunk.js",
+    "static/js/5.da3bb863.chunk.js.map": "/Tweettragedy/static/js/5.da3bb863.chunk.js.map",
+    "static/js/6.35e9b1cc.chunk.js": "/Tweettragedy/static/js/6.35e9b1cc.chunk.js",
+    "static/js/6.35e9b1cc.chunk.js.map": "/Tweettragedy/static/js/6.35e9b1cc.chunk.js.map",
     "static/js/7.23e4977c.chunk.js": "/Tweettragedy/static/js/7.23e4977c.chunk.js",
     "static/js/7.23e4977c.chunk.js.map": "/Tweettragedy/static/js/7.23e4977c.chunk.js.map",
     "index.html": "/Tweettragedy/index.html",
@@ -32,10 +32,10 @@
     "static/media/MyMap.css": "/Tweettragedy/static/media/watr.2c40138b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.507ef41c.js",
+    "static/js/runtime-main.43ae296f.js",
     "static/css/2.adfa4a80.chunk.css",
     "static/js/2.e871b192.chunk.js",
     "static/css/main.11558da2.chunk.css",
-    "static/js/main.82a2996e.chunk.js"
+    "static/js/main.aa9a3911.chunk.js"
   ]
 }
