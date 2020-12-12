@@ -91,7 +91,7 @@ def get_past_tweets(keyword):
     tweets = tw.Cursor(api.search,
                            q=search_words,
                            lang="en",
-                           since=date_since).items(10)
+                           since=date_since).items(100)
 
     #see if we can get 1000 every month
     try:

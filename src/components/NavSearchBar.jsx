@@ -47,7 +47,6 @@ class NavSearchBar extends Component {
     }
     
     async updateDisaster(event){
-
         this.setState({
             disaster: event
         })
@@ -55,7 +54,7 @@ class NavSearchBar extends Component {
         var temp_array = []
         this.loader = "loading"
         //change this url to whatever ip your Flask Server is running on
-        await axios.post('http://localhost:5000/refresh_data', [this.state.disaster,this.state.startDate, this.state.endDate])
+        await axios.post('http://localhost:5000/refresh_data', [event,this.state.startDate, this.state.endDate])
             .then((response) => {
                 db = (JSON.parse(JSON.stringify(response.data)))
                 for(var objects in db){
@@ -74,7 +73,6 @@ class NavSearchBar extends Component {
     }
 
     async updateDisaster_temp(event){
-
         this.setState({
             disaster_temp: event.target.value
         })
@@ -104,6 +102,7 @@ class NavSearchBar extends Component {
         var s_t = this.state.endDate
         this.updateDate_temp([s_t,e_t])
         this.updateSearch(this.state.search_temp)
+        console.log(this.state.disaster_temp)
         this.updateDisaster(this.state.disaster_temp)
         this.setState({
             ready_state: "loading"
