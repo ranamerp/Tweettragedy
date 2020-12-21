@@ -4,7 +4,7 @@ import React from "react";
 const chartJSX = () => {
     return (
         <div >
-          <h1>HEy</h1>
+          <h1>Hey</h1>
         </div>
      );
 }

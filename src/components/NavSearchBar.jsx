@@ -111,7 +111,7 @@ class NavSearchBar extends Component {
     }
     headers = [
         { label: 'created_at', key: 'created_at' },
-        { label: 'user.location', key: 'user.location' },
+        { label: 'user.location', key: 'user.location' }
       ];
 
     load() {
@@ -156,7 +156,7 @@ class NavSearchBar extends Component {
         return(
             <div>
                 
-                <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>
+                <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "7vh"}}>
                     <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweettragedy </Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link as={Link} to="./#">Home</Nav.Link>
@@ -186,7 +186,7 @@ class NavSearchBar extends Component {
                                 placeholder="Enter Location" 
                                 value = {this.state.search_temp} 
                                 onChange={this.updateSearch_temp.bind(this)}
-                                style={{height:"5vh", width:"10vw"}}
+                                style={{height:"4vh", width:"8vw", marginLeft: "10px"}}
                             />
                             <div>&nbsp;</div>
                             <Form.Control 
@@ -194,13 +194,13 @@ class NavSearchBar extends Component {
                                 placeholder="Enter Disaster" 
                                 value = {this.state.disaster_temp} 
                                 onChange={this.updateDisaster_temp.bind(this)}
-                                style={{height:"5vh", width:"10vw"}}
+                                style={{height:"4vh", width:"8vw", marginLeft: "10px"}}
                             />
                             <div>&nbsp;</div>
                             <Button
                                 variant="warning"
                                 onClick={this.submit_Button.bind(this)}
-                                style={{height:"6vh", width:"10vw", fontWeight:"bold", }}
+                                style={{height:"4vh", width:"8vw", fontWeight:"bold", marginLeft: "10px"}}
                             >Submit</Button>
                             &nbsp;
 
@@ -209,7 +209,7 @@ class NavSearchBar extends Component {
                             <Button
                                 variant="success"
                                 onClick={this.submit_Button.bind(this)}
-                                style={{height:"6vh", width:"8vw", fontWeight:"bold", }}
+                                style={{height:"4vh", width:"8vw", fontWeight:"bold", marginLeft: "10px"}}
                             >Download</Button>
                             </CSVLink>
                             &nbsp;

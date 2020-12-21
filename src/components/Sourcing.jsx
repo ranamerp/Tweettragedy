@@ -1,14 +1,14 @@
 import React from 'react';
 import { Jumbotron, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import sourcingbackground from '/Users/markusovich/Tweettragedy-master/src/images/sourcingbackground.png'
 
 const Sourcing = () => {
     return ( 
-    <div>
+    <div style ={ { backgroundImage: "url("+sourcingbackground+")",  width:"100%", height: "120vh"} }>
                 
         <header style={{width:"100vw", height: "10vh"}}>
-            <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "10vh"}}>  
+            <Navbar bg="primary" variant="dark" style={{width:"100vw", height: "7vh"}}>  
                 <Navbar.Brand href="#home"> &nbsp;&nbsp; Tweettragedy </Navbar.Brand>
                 <Nav className="mr-auto">
                         <Nav.Link as={Link} to="./">Home</Nav.Link>
@@ -24,9 +24,8 @@ const Sourcing = () => {
             <br></br>
             <center>
                 <Jumbotron style={{width:"60vw",height:"80vh" , textAlign:"left", fontSize:"3vh"}}>
-                    Thanks to all the creators of the resources we used
+                    Software tools used
                     <br></br>
-                    Following Resources we used
                     <br></br>
                     React
                     <br></br>
